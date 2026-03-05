@@ -13,6 +13,7 @@ export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
   const [deleting, setDeleting] = useState(false)
   const [imgError, setImgError] = useState(false)
   const category = getCategoryById(pin.iconType)
+  const accentColor = pin.pinColor || '#7B8EF5'
 
   async function handleDelete() {
     if (!confirm('Delete this pin?')) return
@@ -25,14 +26,18 @@ export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.96 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, scale: 0.96, y: -8 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.18 }}
-      className="bg-white rounded-2xl overflow-hidden w-72 font-body"
+      className="bg-white rounded-2xl overflow-hidden shadow-2xl font-body"
+      style={{ minWidth: 280, maxWidth: 320 }}
     >
+      {/* Color accent header strip */}
+      <div style={{ background: accentColor, height: 4 }} />
+
       {/* Image or placeholder */}
       {pin.imageUrl && (
-        <div className="w-full h-36 bg-gradient-to-br from-ntz-gradient-start/40 to-ntz-pink/40 relative overflow-hidden">
+        <div className="w-full h-36 relative overflow-hidden" style={{ background: `${accentColor}22` }}>
           {showAsImage ? (
             <img
               src={pin.imageUrl}
@@ -56,10 +61,20 @@ export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
 
       {/* Content */}
       <div className="p-4">
-        {/* Category badge */}
-        <div className="flex items-center gap-1.5 mb-2">
-          <span className="text-base">{category.emoji}</span>
-          <span className="text-xs text-ntz-light font-medium">{category.label}</span>
+        {/* Category badge + close */}
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-1.5">
+            <span
+              className="w-6 h-6 rounded-full flex items-center justify-center text-sm"
+              style={{ background: accentColor }}
+            >
+              {category.emoji}
+            </span>
+            <span className="text-xs text-ntz-light font-medium">{category.label}</span>
+          </div>
+          <button onClick={onClose} className="text-ntz-light hover:text-ntz-dark transition-colors">
+            <X className="w-4 h-4" />
+          </button>
         </div>
 
         <h3 className="font-display font-semibold text-ntz-dark text-base leading-snug mb-1">

@@ -145,6 +145,11 @@ body {
   100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
 }
 
+@keyframes pinDrop {
+  0%   { transform: translateY(-20px) scale(0.6); opacity: 0; }
+  100% { transform: translateY(0)     scale(1);   opacity: 1; }
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;

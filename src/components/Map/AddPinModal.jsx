@@ -1,9 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, MapPin, Link, Image, AlignLeft, Check } from 'lucide-react'
+import { X, MapPin, Link, Image, AlignLeft, Check, Search } from 'lucide-react'
 import { addPin, updatePin } from '../../lib/firestore'
 import { useAuth } from '../../hooks/useAuth'
 import { PIN_CATEGORIES } from './pinIcons'
+
+const PIN_COLORS = [
+  '#7B8EF5', '#62B8F0', '#F06892', '#4CAF7D',
+  '#FF8C42', '#FFD166', '#EF233C', '#333333',
+]
 
 export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
   const { user } = useAuth()
@@ -12,8 +17,16 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
   const [imageUrl, setImageUrl] = useState('')
   const [linkUrl, setLinkUrl] = useState('')
   const [iconType, setIconType] = useState('general')
+  const [pinColor, setPinColor] = useState('#7B8EF5')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
+
+  // Place search state
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState([])
+  const [selectedPlace, setSelectedPlace] = useState(null)
+  const [activeLatlng, setActiveLatlng] = useState(latlng)
+  const searchTimer = useRef(null)
 
   // Pre-fill when editing
   useEffect(() => {
@@ -23,12 +36,47 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
       setImageUrl(editPin.imageUrl || '')
       setLinkUrl(editPin.linkUrl || '')
       setIconType(editPin.iconType || 'general')
+      setPinColor(editPin.pinColor || '#7B8EF5')
     }
   }, [editPin])
+
+  useEffect(() => {
+    setActiveLatlng(latlng)
+  }, [latlng])
+
+  function handleSearchInput(e) {
+    const q = e.target.value
+    setSearchQuery(q)
+    setSearchResults([])
+    clearTimeout(searchTimer.current)
+    if (q.trim().length < 3) return
+    searchTimer.current = setTimeout(async () => {
+      try {
+        const res = await fetch(
+          `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=5&countrycodes=il`,
+          { headers: { 'Accept-Language': 'en', 'User-Agent': 'NunTzadikApp/1.0' } }
+        )
+        const data = await res.json()
+        setSearchResults(data)
+      } catch {
+        // silently ignore search errors
+      }
+    }, 400)
+  }
+
+  function handlePlaceSelect(result) {
+    const coords = { lat: parseFloat(result.lat), lng: parseFloat(result.lon) }
+    setActiveLatlng(coords)
+    setSelectedPlace(result.display_name)
+    setSearchQuery('')
+    setSearchResults([])
+    if (!title) setTitle(result.display_name.split(',')[0])
+  }
 
   async function handleSubmit(e) {
     e.preventDefault()
     if (!title.trim()) { setError('Title is required'); return }
+    if (!activeLatlng) { setError('Please click a location on the map or search for a place'); return }
     setSaving(true)
     setError('')
     try {
@@ -38,13 +86,14 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
         imageUrl: imageUrl.trim(),
         linkUrl: linkUrl.trim(),
         iconType,
+        pinColor,
         userId: user.uid,
       }
 
       if (editPin) {
         await updatePin(editPin.id, data)
       } else {
-        await addPin({ ...data, lat: latlng.lat, lng: latlng.lng })
+        await addPin({ ...data, lat: activeLatlng.lat, lng: activeLatlng.lng })
       }
       onSaved()
     } catch (err) {
@@ -97,6 +146,47 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
           </div>
 
           <form onSubmit={handleSubmit} className="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
+            {/* Place search */}
+            {!editPin && (
+              <div className="relative">
+                <label className="block text-xs font-medium text-ntz-dark mb-1.5">
+                  <Search className="inline w-3 h-3 mr-1" />
+                  Search for a place
+                </label>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={handleSearchInput}
+                  placeholder="Type a place name in Israel..."
+                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-ntz-blue focus:ring-2 focus:ring-ntz-blue/20 outline-none text-sm text-ntz-dark placeholder:text-ntz-light transition-all"
+                />
+                {searchResults.length > 0 && (
+                  <div className="absolute left-0 right-0 top-full mt-1 z-10 bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+                    {searchResults.map((r, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => handlePlaceSelect(r)}
+                        className="w-full text-left px-4 py-2.5 text-xs text-ntz-dark hover:bg-ntz-blue/10 transition-colors border-b border-gray-50 last:border-0"
+                      >
+                        {r.display_name.length > 70 ? r.display_name.slice(0, 70) + '…' : r.display_name}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                {selectedPlace && (
+                  <p className="text-xs text-green-600 mt-1 font-medium">
+                    Pinning: {selectedPlace.split(',')[0]}
+                  </p>
+                )}
+                {activeLatlng && !selectedPlace && (
+                  <p className="text-xs text-ntz-light mt-1">
+                    Map click: {activeLatlng.lat.toFixed(4)}, {activeLatlng.lng.toFixed(4)}
+                  </p>
+                )}
+              </div>
+            )}
+
             {/* Icon picker */}
             <div>
               <label className="block text-xs font-medium text-ntz-dark mb-2">Category</label>
@@ -125,6 +215,27 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
               <p className="text-xs text-ntz-light mt-1">
                 {PIN_CATEGORIES.find(c => c.id === iconType)?.label}
               </p>
+            </div>
+
+            {/* Color picker */}
+            <div>
+              <label className="block text-xs font-medium text-ntz-dark mb-2">Pin color</label>
+              <div className="flex gap-2 flex-wrap">
+                {PIN_COLORS.map((color) => (
+                  <button
+                    key={color}
+                    type="button"
+                    onClick={() => setPinColor(color)}
+                    style={{ background: color }}
+                    className="w-7 h-7 rounded-full transition-transform"
+                    title={color}
+                  >
+                    {pinColor === color && (
+                      <Check className="w-3.5 h-3.5 text-white mx-auto" style={{ filter: 'drop-shadow(0 0 1px rgba(0,0,0,0.5))' }} />
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Title */}

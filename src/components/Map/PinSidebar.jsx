@@ -3,8 +3,20 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { List, X, MapPin, ChevronRight } from 'lucide-react'
 import { getCategoryById } from './pinIcons'
 
+// Short display names for the district filter buttons
+const DISTRICT_LABELS = {
+  HaZafon:   'North',
+  Haifa:     'Haifa',
+  HaMerkaz:  'Central',
+  TelAviv:   'Tel Aviv',
+  Jerusalem: 'Jerusalem',
+  HaDarom:   'South',
+  Golan:     'Golan',
+}
+
 function PinCard({ pin, onClick }) {
   const category = getCategoryById(pin.iconType)
+  const dotColor = pin.pinColor || '#7B8EF5'
 
   return (
     <motion.button
@@ -15,7 +27,10 @@ function PinCard({ pin, onClick }) {
       className="w-full text-left flex items-start gap-3 p-3 rounded-xl hover:bg-ntz-blue/10 transition-colors group border border-transparent hover:border-ntz-blue/20"
     >
       {/* Icon */}
-      <div className="w-9 h-9 rounded-xl gradient-bg flex items-center justify-center text-base flex-shrink-0 shadow-sm">
+      <div
+        className="w-9 h-9 rounded-xl flex items-center justify-center text-base flex-shrink-0 shadow-sm"
+        style={{ background: dotColor }}
+      >
         {category.emoji}
       </div>
 
@@ -33,9 +48,13 @@ function PinCard({ pin, onClick }) {
   )
 }
 
-export default function PinSidebar({ pins, onPinSelect }) {
+export default function PinSidebar({ pins, allPinsCount, districts, selectedDistrict, onDistrictChange, onPinSelect }) {
   const [open, setOpen] = useState(false)
   const [search, setSearch] = useState('')
+
+  const districtNames = districts
+    ? districts.features.map(f => f.properties.NAME_1).filter(n => DISTRICT_LABELS[n])
+    : []
 
   const filtered = pins.filter((p) =>
     p.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -53,7 +72,7 @@ export default function PinSidebar({ pins, onPinSelect }) {
           className="flex items-center gap-2 bg-white text-ntz-dark px-3.5 py-2.5 rounded-xl shadow-ntz-card border border-ntz-blue/30 text-sm font-medium font-body hover:border-ntz-blue transition-colors"
         >
           {open ? <X className="w-4 h-4" /> : <List className="w-4 h-4" />}
-          <span>{open ? 'Close' : `Pins (${pins.length})`}</span>
+          <span>{open ? 'Close' : `Pins (${allPinsCount ?? pins.length})`}</span>
         </motion.button>
       </div>
 
@@ -87,6 +106,31 @@ export default function PinSidebar({ pins, onPinSelect }) {
                 className="w-full bg-white/20 text-white placeholder:text-white/70 text-sm px-3 py-2 rounded-xl border border-white/20 outline-none focus:bg-white/30 transition-colors"
               />
             </div>
+
+            {/* District filter */}
+            {districtNames.length > 0 && (
+              <div className="px-3 py-2 border-b border-ntz-blue/10 flex gap-1.5 flex-wrap">
+                <button
+                  onClick={() => onDistrictChange(null)}
+                  className={`px-2.5 py-1 rounded-full text-xs font-medium transition-all ${
+                    !selectedDistrict ? 'btn-gradient text-white shadow-sm' : 'bg-gray-100 text-ntz-dark hover:bg-gray-200'
+                  }`}
+                >
+                  All
+                </button>
+                {districtNames.map((name) => (
+                  <button
+                    key={name}
+                    onClick={() => onDistrictChange(selectedDistrict === name ? null : name)}
+                    className={`px-2.5 py-1 rounded-full text-xs font-medium transition-all ${
+                      selectedDistrict === name ? 'btn-gradient text-white shadow-sm' : 'bg-gray-100 text-ntz-dark hover:bg-gray-200'
+                    }`}
+                  >
+                    {DISTRICT_LABELS[name]}
+                  </button>
+                ))}
+              </div>
+            )}
 
             {/* Pin list */}
             <div className="flex-1 overflow-y-auto px-3 py-3 space-y-1">

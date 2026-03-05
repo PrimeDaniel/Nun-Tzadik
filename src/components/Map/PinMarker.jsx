@@ -1,52 +1,57 @@
-import { Marker } from 'react-leaflet'
+import { Marker, Tooltip } from 'react-leaflet'
 import L from 'leaflet'
 import { getCategoryById } from './pinIcons'
 
-function createPinIcon(category, isOwner) {
+function createPinIcon(category, color) {
   const cat = getCategoryById(category)
   const emoji = cat.emoji
+  const bg = color || '#7B8EF5'
 
   const html = `
-    <div class="ntz-pin-marker" style="position:relative;width:40px;height:48px;">
-      <svg width="40" height="48" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="pinGrad_${category}" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#D9DFFF;stop-opacity:1" />
-            <stop offset="50%" style="stop-color:#BBE1FA;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#FFC4D1;stop-opacity:1" />
-          </linearGradient>
-          <filter id="shadow_${category}" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="rgba(255,196,209,0.6)"/>
-          </filter>
-        </defs>
-        <path d="M20 2C12.268 2 6 8.268 6 16C6 26 20 46 20 46C20 46 34 26 34 16C34 8.268 27.732 2 20 2Z"
-          fill="url(#pinGrad_${category})"
-          stroke="white"
-          stroke-width="2"
-          filter="url(#shadow_${category})"
-        />
-      </svg>
-      <div style="position:absolute;top:6px;left:50%;transform:translateX(-50%);font-size:16px;line-height:1;user-select:none;">${emoji}</div>
+    <div class="ntz-pin-marker" style="position:relative;width:44px;height:52px;animation:pinDrop 0.35s cubic-bezier(0.34,1.56,0.64,1);">
+      <div style="
+        width:40px;height:40px;
+        border-radius:50%;
+        background:${bg};
+        border:3px solid white;
+        box-shadow:0 4px 12px rgba(0,0,0,0.25);
+        display:flex;align-items:center;justify-content:center;
+        font-size:20px;line-height:1;user-select:none;
+        margin:0 auto;
+      ">${emoji}</div>
+      <div style="
+        width:0;height:0;
+        border-left:6px solid transparent;
+        border-right:6px solid transparent;
+        border-top:10px solid ${bg};
+        margin:0 auto;
+      "></div>
     </div>
   `
 
   return L.divIcon({
     html,
     className: '',
-    iconSize: [40, 48],
-    iconAnchor: [20, 48],
-    popupAnchor: [0, -50],
+    iconSize: [44, 52],
+    iconAnchor: [22, 52],
+    popupAnchor: [0, -54],
   })
 }
 
 export default function PinMarker({ pin, onClick }) {
-  const icon = createPinIcon(pin.iconType || 'general', true)
+  const icon = createPinIcon(pin.iconType || 'general', pin.pinColor)
 
   return (
     <Marker
       position={[pin.lat, pin.lng]}
       icon={icon}
       eventHandlers={{ click: () => onClick(pin) }}
-    />
+    >
+      <Tooltip direction="top" offset={[0, -54]} opacity={0.95}>
+        <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500 }}>
+          {pin.title}
+        </span>
+      </Tooltip>
+    </Marker>
   )
 }

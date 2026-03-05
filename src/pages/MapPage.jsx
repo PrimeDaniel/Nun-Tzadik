@@ -1,12 +1,50 @@
+import { useState, useEffect } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import { usePins } from '../hooks/usePins'
 import MapView from '../components/Map/MapView'
 import PinSidebar from '../components/Map/PinSidebar'
 import Layout from '../components/Layout/Layout'
 
+function pointInPolygon(point, polygon) {
+  const [x, y] = point
+  let inside = false
+  const ring = polygon[0]
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i], [xj, yj] = ring[j]
+    if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi)
+      inside = !inside
+  }
+  return inside
+}
+
+function getDistrictForPin(pin, districts) {
+  const pt = [pin.lng, pin.lat]
+  for (const feat of districts.features) {
+    const geom = feat.geometry
+    const polys = geom.type === 'MultiPolygon' ? geom.coordinates : [geom.coordinates]
+    for (const poly of polys) {
+      if (pointInPolygon(pt, poly)) return feat.properties.NAME_1
+    }
+  }
+  return null
+}
+
 export default function MapPage() {
   const { user } = useAuth()
   const { pins, loading, error } = usePins(user?.uid)
+  const [districts, setDistricts] = useState(null)
+  const [selectedDistrict, setSelectedDistrict] = useState(null)
+
+  useEffect(() => {
+    fetch('/israel-districts.json')
+      .then(r => r.json())
+      .then(setDistricts)
+      .catch(() => {})
+  }, [])
+
+  const filteredPins = selectedDistrict && districts
+    ? pins.filter(p => getDistrictForPin(p, districts) === selectedDistrict)
+    : pins
 
   return (
     <Layout fullHeight>
@@ -37,8 +75,15 @@ export default function MapPage() {
           </div>
         ) : (
           <>
-            <MapView pins={pins} isOwner={true} readOnly={false} />
-            <PinSidebar pins={pins} onPinSelect={() => {}} />
+            <MapView pins={filteredPins} isOwner={true} readOnly={false} />
+            <PinSidebar
+              pins={filteredPins}
+              allPinsCount={pins.length}
+              districts={districts}
+              selectedDistrict={selectedDistrict}
+              onDistrictChange={setSelectedDistrict}
+              onPinSelect={() => {}}
+            />
           </>
         )}
       </div>
