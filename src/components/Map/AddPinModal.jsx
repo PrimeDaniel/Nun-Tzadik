@@ -48,7 +48,8 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
       }
       onSaved()
     } catch (err) {
-      setError('Failed to save pin. Please try again.')
+      console.error('addPin error:', err)
+      setError(err?.message || 'Failed to save pin. Check the console for details.')
     } finally {
       setSaving(false)
     }

@@ -6,7 +6,6 @@ import {
   doc,
   query,
   where,
-  orderBy,
   onSnapshot,
   serverTimestamp,
   getDoc,
@@ -31,10 +30,11 @@ export async function getUserProfile(userId) {
 // ---- Pins ----
 
 export function subscribeToPins(userId, callback, onError) {
+  // No orderBy — avoids composite index requirement.
+  // Sorting is done client-side in usePins.js.
   const q = query(
     collection(db, 'pins'),
-    where('userId', '==', userId),
-    orderBy('createdAt', 'desc')
+    where('userId', '==', userId)
   )
   return onSnapshot(
     q,

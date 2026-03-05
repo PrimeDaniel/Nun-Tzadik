@@ -17,7 +17,13 @@ export function usePins(userId) {
     const unsubscribe = subscribeToPins(
       userId,
       (data) => {
-        setPins(data)
+        // Sort newest-first client-side (no composite index needed)
+        const sorted = [...data].sort((a, b) => {
+          const ta = a.createdAt?.toMillis?.() ?? 0
+          const tb = b.createdAt?.toMillis?.() ?? 0
+          return tb - ta
+        })
+        setPins(sorted)
         setLoading(false)
       },
       (err) => {
