@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react'
 import { GeoJSON } from 'react-leaflet'
 
-// Maps GADM NAME_1 values to display names and brand colors
+// Maps GADM NAME_1 values to display names
 const DISTRICT_META = {
-  HaZafon:   { name: 'Northern District',  nameHe: 'מחוז הצפון',   fill: '#D9DFFF', stroke: '#A8B4F8' },
-  Haifa:     { name: 'Haifa District',     nameHe: 'מחוז חיפה',    fill: '#BBE1FA', stroke: '#7ABEF5' },
-  HaMerkaz:  { name: 'Central District',   nameHe: 'מחוז המרכז',   fill: '#E8EDFF', stroke: '#B0B8F5' },
-  TelAviv:   { name: 'Tel Aviv District',  nameHe: 'מחוז תל אביב', fill: '#FFD4DE', stroke: '#F5A0B8' },
-  Jerusalem: { name: 'Jerusalem District', nameHe: 'מחוז ירושלים', fill: '#FFC4D1', stroke: '#F090AA' },
-  HaDarom:   { name: 'Southern District',  nameHe: 'מחוז הדרום',   fill: '#D4EDFF', stroke: '#90CCEE' },
-  Golan:     { name: 'Golan District',     nameHe: 'מחוז הגולן',   fill: '#DDE8FF', stroke: '#AAB8F8' },
+  HaZafon:   { name: 'Northern District',  nameHe: 'מחוז הצפון'   },
+  Haifa:     { name: 'Haifa District',     nameHe: 'מחוז חיפה'    },
+  HaMerkaz:  { name: 'Central District',   nameHe: 'מחוז המרכז'   },
+  TelAviv:   { name: 'Tel Aviv District',  nameHe: 'מחוז תל אביב' },
+  Jerusalem: { name: 'Jerusalem District', nameHe: 'מחוז ירושלים' },
+  HaDarom:   { name: 'Southern District',  nameHe: 'מחוז הדרום'   },
+  Golan:     { name: 'Golan District',     nameHe: 'מחוז הגולן'   },
 }
 
 export default function IsraelProvinces() {
@@ -24,14 +24,12 @@ export default function IsraelProvinces() {
 
   if (!geoData) return null
 
-  function styleFeature(feature) {
-    const meta = DISTRICT_META[feature.properties.NAME_1]
+  function styleFeature() {
     return {
-      fillColor:   meta?.fill   || '#E8ECFF',
-      fillOpacity: 0.18,
-      color:       meta?.stroke || '#C0C8F0',
-      weight:      1.5,
-      opacity:     0.7,
+      fillOpacity: 0,
+      color:       '#7B8EF5',
+      weight:      2,
+      opacity:     0.6,
     }
   }
 
@@ -48,8 +46,8 @@ export default function IsraelProvinces() {
     )
 
     layer.on({
-      mouseover(e) { e.target.setStyle({ fillOpacity: 0.35, weight: 2 }) },
-      mouseout(e)  { e.target.setStyle({ fillOpacity: 0.18, weight: 1.5 }) },
+      mouseover(e) { e.target.setStyle({ weight: 3, opacity: 1 }) },
+      mouseout(e)  { e.target.setStyle({ weight: 2, opacity: 0.6 }) },
     })
   }
 
