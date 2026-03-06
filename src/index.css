@@ -78,6 +78,7 @@ body {
 /* Custom pin marker */
 .ntz-pin-marker {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;

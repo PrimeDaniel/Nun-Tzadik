@@ -18,12 +18,12 @@ function createPinIcon(category, color) {
         display:flex;align-items:center;justify-content:center;
         font-size:20px;line-height:1;user-select:none;
         margin:0 auto;
+        text-shadow:0 0 6px rgba(255,255,255,0.95),0 0 12px rgba(255,255,255,0.7);
       ">${emoji}</div>
       <div style="
-        width:0;height:0;
-        border-left:6px solid transparent;
-        border-right:6px solid transparent;
-        border-top:10px solid ${bg};
+        width:12px;height:10px;
+        background:${bg};
+        clip-path:polygon(50% 100%,0% 0%,100% 0%);
         margin:0 auto;
       "></div>
     </div>

@@ -6,8 +6,18 @@ import { useAuth } from '../../hooks/useAuth'
 import { PIN_CATEGORIES } from './pinIcons'
 
 const PIN_COLORS = [
+  // Solid colors
   '#7B8EF5', '#62B8F0', '#F06892', '#4CAF7D',
   '#FF8C42', '#FFD166', '#EF233C', '#333333',
+  // Gradient colors
+  'linear-gradient(135deg,#D9DFFF,#BBE1FA,#FFC4D1)',
+  'linear-gradient(135deg,#7B8EF5,#F06892)',
+  'linear-gradient(135deg,#62B8F0,#4CAF7D)',
+  'linear-gradient(135deg,#FF8C42,#FFD166)',
+  'linear-gradient(135deg,#F06892,#FF8C42)',
+  'linear-gradient(135deg,#7B8EF5,#62B8F0,#F06892)',
+  'linear-gradient(135deg,#4CAF7D,#62B8F0)',
+  'linear-gradient(135deg,#EF233C,#7B8EF5)',
 ]
 
 export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
@@ -190,7 +200,7 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
             {/* Icon picker */}
             <div>
               <label className="block text-xs font-medium text-ntz-dark mb-2">Category</label>
-              <div className="grid grid-cols-6 gap-1.5">
+              <div className="grid grid-cols-8 gap-1.5">
                 {PIN_CATEGORIES.map((cat) => (
                   <button
                     key={cat.id}
@@ -221,17 +231,22 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
             <div>
               <label className="block text-xs font-medium text-ntz-dark mb-2">Pin color</label>
               <div className="flex gap-2 flex-wrap">
-                {PIN_COLORS.map((color) => (
+                {PIN_COLORS.map((color, i) => (
                   <button
-                    key={color}
+                    key={i}
                     type="button"
                     onClick={() => setPinColor(color)}
-                    style={{ background: color }}
-                    className="w-7 h-7 rounded-full transition-transform"
-                    title={color}
+                    style={{
+                      background: color,
+                      outline: pinColor === color ? '2px solid white' : 'none',
+                      boxShadow: pinColor === color ? '0 0 0 3px #7B8EF5' : 'none',
+                      transform: pinColor === color ? 'scale(1.15)' : 'scale(1)',
+                    }}
+                    className="w-7 h-7 rounded-full transition-all flex items-center justify-center"
+                    title="Select color"
                   >
                     {pinColor === color && (
-                      <Check className="w-3.5 h-3.5 text-white mx-auto" style={{ filter: 'drop-shadow(0 0 1px rgba(0,0,0,0.5))' }} />
+                      <Check className="w-3 h-3 text-white" style={{ filter: 'drop-shadow(0 0 2px rgba(0,0,0,0.6))' }} />
                     )}
                   </button>
                 ))}
