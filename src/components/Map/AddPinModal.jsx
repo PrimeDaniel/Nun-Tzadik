@@ -1,9 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, MapPin, Link, Image, AlignLeft, Check, Search } from 'lucide-react'
+import { X, MapPin, Link, Image, AlignLeft, Check, Search, Camera } from 'lucide-react'
 import { addPin, updatePin } from '../../lib/firestore'
 import { useAuth } from '../../hooks/useAuth'
+import { useUpload } from '../../lib/UploadContext'
 import { PIN_CATEGORIES } from './pinIcons'
+
+const MAX_IMAGES = 15
 
 const PIN_COLORS = [
   '#7B8EF5', '#62B8F0', '#F06892', '#4CAF7D',
@@ -12,14 +15,21 @@ const PIN_COLORS = [
 
 export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
   const { user } = useAuth()
+  const { startUploads } = useUpload()
+  const fileInputRef = useRef(null)
+
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-  const [imageUrl, setImageUrl] = useState('')
   const [linkUrl, setLinkUrl] = useState('')
   const [iconType, setIconType] = useState('general')
   const [pinColor, setPinColor] = useState('#7B8EF5')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
+
+  // Image state
+  const [imageFiles, setImageFiles] = useState([])       // new File objects
+  const [imagePreviews, setImagePreviews] = useState([]) // object URLs for new files
+  const [existingUrls, setExistingUrls] = useState([])   // already-saved URLs (edit mode)
 
   // Place search state
   const [searchQuery, setSearchQuery] = useState('')
@@ -33,16 +43,27 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
     if (editPin) {
       setTitle(editPin.title || '')
       setDescription(editPin.description || '')
-      setImageUrl(editPin.imageUrl || '')
       setLinkUrl(editPin.linkUrl || '')
       setIconType(editPin.iconType || 'general')
       setPinColor(editPin.pinColor || '#7B8EF5')
+      setActiveLatlng({ lat: editPin.lat, lng: editPin.lng })
+      // Support both old single imageUrl and new imageUrls array
+      if (editPin.imageUrls?.length) {
+        setExistingUrls(editPin.imageUrls)
+      } else if (editPin.imageUrl) {
+        setExistingUrls([editPin.imageUrl])
+      }
     }
   }, [editPin])
 
   useEffect(() => {
     setActiveLatlng(latlng)
   }, [latlng])
+
+  // Cleanup object URLs on unmount
+  useEffect(() => {
+    return () => { imagePreviews.forEach(URL.revokeObjectURL) }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   function handleSearchInput(e) {
     const q = e.target.value
@@ -73,6 +94,31 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
     if (!title) setTitle(result.display_name.split(',')[0])
   }
 
+  function handleFilesSelected(e) {
+    const selected = Array.from(e.target.files || [])
+    if (!selected.length) return
+    const totalAllowed = MAX_IMAGES - existingUrls.length - imageFiles.length
+    const toAdd = selected.slice(0, totalAllowed)
+    const newPreviews = toAdd.map(f => URL.createObjectURL(f))
+    setImageFiles(prev => [...prev, ...toAdd])
+    setImagePreviews(prev => [...prev, ...newPreviews])
+    // Reset input so same files can be re-selected
+    e.target.value = ''
+  }
+
+  function removeNewImage(idx) {
+    URL.revokeObjectURL(imagePreviews[idx])
+    setImageFiles(prev => prev.filter((_, i) => i !== idx))
+    setImagePreviews(prev => prev.filter((_, i) => i !== idx))
+  }
+
+  function removeExistingImage(idx) {
+    setExistingUrls(prev => prev.filter((_, i) => i !== idx))
+  }
+
+  const totalImages = existingUrls.length + imageFiles.length
+  const canAddMore = totalImages < MAX_IMAGES
+
   async function handleSubmit(e) {
     e.preventDefault()
     if (!title.trim()) { setError('Title is required'); return }
@@ -83,7 +129,9 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
       const data = {
         title: title.trim(),
         description: description.trim(),
-        imageUrl: imageUrl.trim(),
+        // Save with existing URLs only; new uploads will patch in via background context
+        imageUrls: existingUrls,
+        imageUrl: existingUrls[0] || '',
         linkUrl: linkUrl.trim(),
         iconType,
         pinColor,
@@ -92,14 +140,19 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
 
       if (editPin) {
         await updatePin(editPin.id, data)
+        if (imageFiles.length > 0) {
+          startUploads(editPin.id, imageFiles, user.uid, existingUrls)
+        }
       } else {
-        await addPin({ ...data, lat: activeLatlng.lat, lng: activeLatlng.lng })
+        const docRef = await addPin({ ...data, lat: activeLatlng.lat, lng: activeLatlng.lng })
+        if (imageFiles.length > 0) {
+          startUploads(docRef.id, imageFiles, user.uid, existingUrls)
+        }
       }
       onSaved()
     } catch (err) {
       console.error('addPin error:', err)
       setError(err?.message || 'Failed to save pin. Check the console for details.')
-    } finally {
       setSaving(false)
     }
   }
@@ -272,20 +325,69 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
               />
             </div>
 
-            {/* Image URL */}
+            {/* Photo upload */}
             <div>
-              <label className="block text-xs font-medium text-ntz-dark mb-1.5">
+              <label className="block text-xs font-medium text-ntz-dark mb-2">
                 <Image className="inline w-3 h-3 mr-1" />
-                Image URL
+                Photos
+                <span className="text-ntz-light font-normal ml-1">({totalImages}/{MAX_IMAGES})</span>
               </label>
+
+              {/* Thumbnail grid */}
+              {totalImages > 0 && (
+                <div className="grid grid-cols-4 gap-2 mb-2">
+                  {/* Existing saved images */}
+                  {existingUrls.map((url, i) => (
+                    <div key={`ex-${i}`} className="relative aspect-square rounded-lg overflow-hidden group">
+                      <img src={url} alt="" className="w-full h-full object-cover" />
+                      <button
+                        type="button"
+                        onClick={() => removeExistingImage(i)}
+                        className="absolute top-0.5 right-0.5 w-5 h-5 bg-black/60 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        <X className="w-3 h-3 text-white" />
+                      </button>
+                    </div>
+                  ))}
+                  {/* New file previews */}
+                  {imagePreviews.map((src, i) => (
+                    <div key={`new-${i}`} className="relative aspect-square rounded-lg overflow-hidden group">
+                      <img src={src} alt="" className="w-full h-full object-cover" />
+                      <button
+                        type="button"
+                        onClick={() => removeNewImage(i)}
+                        className="absolute top-0.5 right-0.5 w-5 h-5 bg-black/60 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        <X className="w-3 h-3 text-white" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Upload button / drop area */}
+              {canAddMore && (
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="w-full border-2 border-dashed border-gray-200 hover:border-ntz-blue rounded-xl py-4 flex flex-col items-center gap-1.5 transition-colors text-ntz-light hover:text-ntz-dark"
+                >
+                  <Camera className="w-5 h-5" />
+                  <span className="text-xs font-medium">
+                    {totalImages === 0 ? 'Click to add photos' : 'Add more photos'}
+                  </span>
+                  <span className="text-xs opacity-60">Up to {MAX_IMAGES - totalImages} more</span>
+                </button>
+              )}
+
               <input
-                type="url"
-                value={imageUrl}
-                onChange={(e) => setImageUrl(e.target.value)}
-                placeholder="https://... or Instagram/Facebook link"
-                className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-ntz-blue focus:ring-2 focus:ring-ntz-blue/20 outline-none text-sm text-ntz-dark placeholder:text-ntz-light transition-all"
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                multiple
+                className="hidden"
+                onChange={handleFilesSelected}
               />
-              <p className="text-xs text-ntz-light mt-1">Paste a direct image URL or a social media post link</p>
             </div>
 
             {/* Link URL */}
@@ -326,7 +428,7 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
                 disabled={saving}
                 className="flex-1 btn-gradient text-white py-2.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-60 shadow-ntz-pin"
               >
-                {saving ? 'Saving...' : (editPin ? 'Save Changes' : 'Add Pin')}
+                {saving ? 'Saving…' : (editPin ? 'Save Changes' : 'Add Pin')}
               </button>
             </div>
           </form>

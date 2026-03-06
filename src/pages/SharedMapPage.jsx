@@ -4,11 +4,13 @@ import { motion } from 'framer-motion'
 import { Share2, Check, ArrowLeft } from 'lucide-react'
 import { usePins } from '../hooks/usePins'
 import { getUserProfile } from '../lib/firestore'
+import { useAuth } from '../hooks/useAuth'
 import MapView from '../components/Map/MapView'
 import PinSidebar from '../components/Map/PinSidebar'
 
 export default function SharedMapPage() {
   const { userId } = useParams()
+  const { user: viewerUser } = useAuth()
   const { pins, loading } = usePins(userId)
   const [ownerProfile, setOwnerProfile] = useState(null)
   const [copied, setCopied] = useState(false)
@@ -80,7 +82,7 @@ export default function SharedMapPage() {
           </div>
         ) : (
           <>
-            <MapView pins={pins} isOwner={false} readOnly={true} />
+            <MapView pins={pins} isOwner={false} readOnly={true} viewerUser={viewerUser} />
             <PinSidebar pins={pins} onPinSelect={() => { }} />
           </>
         )}

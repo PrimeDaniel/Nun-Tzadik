@@ -1,19 +1,19 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Trash2, Edit3, X, Image, Map, Navigation } from 'lucide-react'
-import { deletePin } from '../../lib/firestore'
+import { ExternalLink, Trash2, Edit3, X, Map, Navigation, ChevronLeft, ChevronRight, Copy, Check } from 'lucide-react'
+import { deletePin, addPin } from '../../lib/firestore'
 import { getCategoryById } from './pinIcons'
 
-function isDirectImage(url) {
-  if (!url) return false
-  return /\.(jpg|jpeg|png|gif|webp|avif|svg)(\?.*)?$/i.test(url)
-}
-
-export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
+export default function PinPopup({ pin, isOwner, viewerUser, onEdit, onClose }) {
   const [deleting, setDeleting] = useState(false)
-  const [imgError, setImgError] = useState(false)
+  const [copying, setCopying] = useState(false)
+  const [copied, setCopied] = useState(false)
+  const [imgIdx, setImgIdx] = useState(0)
   const category = getCategoryById(pin.iconType)
   const accentColor = pin.pinColor || '#7B8EF5'
+
+  // Support both new imageUrls[] and legacy single imageUrl
+  const images = pin.imageUrls?.length ? pin.imageUrls : pin.imageUrl ? [pin.imageUrl] : []
 
   async function handleDelete() {
     if (!confirm('Delete this pin?')) return
@@ -22,7 +22,18 @@ export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
     onClose()
   }
 
-  const showAsImage = pin.imageUrl && isDirectImage(pin.imageUrl) && !imgError
+  async function handleCopy() {
+    if (!viewerUser) return
+    setCopying(true)
+    try {
+      const { id: _id, createdAt: _ts, userId: _uid, ...rest } = pin
+      await addPin({ ...rest, userId: viewerUser.uid })
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } finally {
+      setCopying(false)
+    }
+  }
 
   return (
     <motion.div
@@ -35,26 +46,39 @@ export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
       {/* Color accent header strip */}
       <div style={{ background: accentColor, height: 4 }} />
 
-      {/* Image or placeholder */}
-      {pin.imageUrl && (
-        <div className="w-full h-36 relative overflow-hidden" style={{ background: `${accentColor}22` }}>
-          {showAsImage ? (
-            <img
-              src={pin.imageUrl}
-              alt={pin.title}
-              className="w-full h-full object-cover"
-              onError={() => setImgError(true)}
-            />
-          ) : (
-            <a
-              href={pin.imageUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center h-full text-ntz-light hover:text-ntz-dark transition-colors group"
-            >
-              <Image className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform" />
-              <span className="text-xs font-medium">View image / post</span>
-            </a>
+      {/* Image gallery */}
+      {images.length > 0 && (
+        <div className="w-full h-44 relative overflow-hidden" style={{ background: `${accentColor}22` }}>
+          <img
+            key={imgIdx}
+            src={images[imgIdx]}
+            alt={pin.title}
+            className="w-full h-full object-cover"
+          />
+          {images.length > 1 && (
+            <>
+              <button
+                onClick={() => setImgIdx(i => (i - 1 + images.length) % images.length)}
+                className="absolute left-1.5 top-1/2 -translate-y-1/2 w-7 h-7 bg-black/40 hover:bg-black/60 rounded-full flex items-center justify-center transition-colors"
+              >
+                <ChevronLeft className="w-4 h-4 text-white" />
+              </button>
+              <button
+                onClick={() => setImgIdx(i => (i + 1) % images.length)}
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 w-7 h-7 bg-black/40 hover:bg-black/60 rounded-full flex items-center justify-center transition-colors"
+              >
+                <ChevronRight className="w-4 h-4 text-white" />
+              </button>
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                {images.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setImgIdx(i)}
+                    className={`w-1.5 h-1.5 rounded-full transition-all ${i === imgIdx ? 'bg-white scale-125' : 'bg-white/50'}`}
+                  />
+                ))}
+              </div>
+            </>
           )}
         </div>
       )}
@@ -87,26 +111,7 @@ export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
           </p>
         )}
 
-        <div className="flex items-center gap-2 flex-wrap">
-          {/* Navigation buttons */}
-          <a
-            href={`https://www.google.com/maps/dir/?api=1&destination=${pin.lat},${pin.lng}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-full transition-colors"
-          >
-            <Map className="w-3 h-3" />
-            Google Maps
-          </a>
-          <a
-            href={`https://waze.com/ul?ll=${pin.lat},${pin.lng}&navigate=yes`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-700 bg-cyan-50 hover:bg-cyan-100 px-3 py-1.5 rounded-full transition-colors"
-          >
-            <Navigation className="w-3 h-3" />
-            Waze
-          </a>
+        <div className="flex items-center gap-2 flex-wrap mb-4">
 
           {pin.linkUrl && (
             <a
@@ -139,6 +144,39 @@ export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
               </button>
             </>
           )}
+
+          {!isOwner && viewerUser && (
+            <button
+              onClick={handleCopy}
+              disabled={copying}
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-green-700 bg-green-50 hover:bg-green-100 px-3 py-1.5 rounded-full transition-colors disabled:opacity-50"
+            >
+              {copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+              {copied ? 'Copied!' : copying ? '...' : 'Copy to my map'}
+            </button>
+          )}
+        </div>
+
+        {/* Primary Navigation Buttons */}
+        <div className="flex flex-row gap-2 mt-2 w-full">
+          <a
+            href={`https://waze.com/ul?ll=${pin.lat},${pin.lng}&navigate=yes`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-1.5 text-xs font-semibold text-white bg-[#4A90E2] hover:bg-[#3A80D2] py-2.5 rounded-full transition-colors shadow-sm cursor-pointer"
+          >
+            <Navigation className="w-3.5 h-3.5 text-white fill-white" />
+            Waze
+          </a>
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${pin.lat},${pin.lng}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-1.5 text-xs font-semibold text-white bg-[#37BA6B] hover:bg-[#2CA05A] py-2.5 rounded-full transition-colors shadow-sm cursor-pointer"
+          >
+            <Map className="w-3.5 h-3.5 text-white fill-white" />
+            Google Maps
+          </a>
         </div>
       </div>
     </motion.div>

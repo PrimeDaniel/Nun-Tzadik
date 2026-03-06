@@ -59,7 +59,7 @@ function FlyToPin({ pin, onReady }) {
   return null
 }
 
-export default function MapView({ pins, isOwner = true, readOnly = false, externalPin }) {
+export default function MapView({ pins, isOwner = true, readOnly = false, externalPin, viewerUser }) {
   const { user } = useAuth()
   const [isAdding, setIsAdding] = useState(false)
   const [pendingLatlng, setPendingLatlng] = useState(null)
@@ -214,6 +214,7 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
               <PinPopup
                 pin={selectedPin}
                 isOwner={isOwner && user?.uid === selectedPin.userId}
+                viewerUser={viewerUser}
                 onEdit={handleEdit}
                 onClose={() => setSelectedPin(null)}
               />

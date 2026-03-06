@@ -5,6 +5,7 @@ import { useGroups } from '../hooks/useGroups'
 import { updateGroup } from '../lib/firestore'
 import MapView from '../components/Map/MapView'
 import PinSidebar from '../components/Map/PinSidebar'
+import UploadProgressBadge from '../components/Map/UploadProgressBadge'
 import Layout from '../components/Layout/Layout'
 
 function pointInPolygon(point, polygon) {
@@ -80,6 +81,7 @@ export default function MapPage() {
         ) : (
           <>
             <MapView pins={filteredPins} isOwner={true} readOnly={false} externalPin={sidebarPin} />
+            <UploadProgressBadge />
             <PinSidebar
               pins={filteredPins}
               allPinsCount={pins.length}

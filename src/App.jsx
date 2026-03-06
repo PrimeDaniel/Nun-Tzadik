@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider, useAuth } from './hooks/useAuth'
+import { UploadProvider } from './lib/UploadContext'
 import LandingPage from './pages/LandingPage'
 import MapPage from './pages/MapPage'
 import SharedMapPage from './pages/SharedMapPage'
@@ -57,7 +58,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <AppRoutes />
+        <UploadProvider>
+          <AppRoutes />
+        </UploadProvider>
       </AuthProvider>
     </BrowserRouter>
   )

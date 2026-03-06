@@ -212,7 +212,7 @@ export default function PinSidebar({
   return (
     <>
       {/* Toggle button */}
-      <div className="absolute top-4 right-4 z-[500]">
+      <div className="absolute top-1 right-4 z-[500]">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
