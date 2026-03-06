@@ -52,11 +52,35 @@ export default function LandingPage() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="relative z-10"
         >
-          <img
-            src="/Logo.png"
-            alt="Nun-Tzadik"
-            className="h-24 mx-auto mb-8 drop-shadow-lg"
-          />
+          <div className="relative flex justify-center mb-10 w-full">
+            {/* Glowing background behind logo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{
+                opacity: [0.3, 0.6, 0.3],
+                scale: [0.9, 1.05, 0.9],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-tr from-purple-400 via-pink-300 to-blue-400 rounded-full blur-[40px] opacity-50 z-0"
+            />
+            {/* Logo Image */}
+            <motion.img
+              initial={{ y: 0 }}
+              animate={{ y: [-6, 6, -6] }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              src="/nunheb.png"
+              alt="Nun-Tzadik"
+              className="h-28 relative z-10 drop-shadow-2xl"
+            />
+          </div>
 
           <h1 className="font-display font-bold text-5xl sm:text-6xl text-ntz-dark mb-4 leading-tight">
             Your map,{' '}
@@ -139,8 +163,10 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-gray-100 py-6 text-center text-ntz-light text-xs font-body">
-        <img src="/Logo.png" alt="" className="h-8 mx-auto mb-3 opacity-60" />
-        <p>© {new Date().getFullYear()} Nun-Tzadik · נ&quot;צ</p>
+        <div className="flex items-center justify-center gap-2 mb-3">
+          <img src="/nuntzadikheb.png" alt="" className="h-4 opacity-70 object-contain" />
+        </div>
+        <p>© {new Date().getFullYear()} Nun-Tzadik</p>
       </footer>
     </div>
   )

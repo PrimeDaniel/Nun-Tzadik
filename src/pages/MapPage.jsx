@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import { usePins } from '../hooks/usePins'
+import { useGroups } from '../hooks/useGroups'
+import { updateGroup } from '../lib/firestore'
 import MapView from '../components/Map/MapView'
 import PinSidebar from '../components/Map/PinSidebar'
 import Layout from '../components/Layout/Layout'
@@ -32,6 +34,7 @@ function getDistrictForPin(pin, districts) {
 export default function MapPage() {
   const { user } = useAuth()
   const { pins, loading, error } = usePins(user?.uid)
+  const { groups } = useGroups(user?.uid)
   const [districts, setDistricts] = useState(null)
   const [selectedDistrict, setSelectedDistrict] = useState(null)
   const [sidebarPin, setSidebarPin] = useState(null)
@@ -84,6 +87,8 @@ export default function MapPage() {
               selectedDistrict={selectedDistrict}
               onDistrictChange={setSelectedDistrict}
               onPinSelect={setSidebarPin}
+              groups={groups}
+              onGroupUpdate={updateGroup}
             />
           </>
         )}

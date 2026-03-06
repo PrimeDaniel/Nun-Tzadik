@@ -28,12 +28,12 @@ export default function SharedMapPage() {
   return (
     <div className="h-screen flex flex-col bg-white font-body overflow-hidden">
       {/* Shared map header */}
-      <header className="h-14 bg-white/90 backdrop-blur-md border-b border-ntz-blue/20 flex items-center px-4 gap-3 z-[600] relative shadow-sm flex-shrink-0">
-        <Link to="/" className="flex items-center gap-2">
-          <img src="/Logo.png" alt="Nun-Tzadik" className="h-8" />
+      <header className="h-14 bg-white/90 backdrop-blur-md border-b border-ntz-blue/20 flex flex-row-reverse items-center px-4 gap-3 z-[600] relative shadow-sm flex-shrink-0">
+        <Link to="/" className="flex flex-row-reverse items-center gap-2">
+          <img src="/nunheb.png" alt="Nun-Tzadik" className="h-8" />
         </Link>
 
-        <div className="flex-1 min-w-0 ml-2">
+        <div className="flex-1 min-w-0 mr-2 text-right">
           {ownerProfile ? (
             <div>
               <p className="text-xs text-ntz-light font-body">Viewing map by</p>
@@ -42,19 +42,19 @@ export default function SharedMapPage() {
               </p>
             </div>
           ) : (
-            <div className="h-8 w-32 bg-gray-100 rounded animate-pulse" />
+            <div className="h-8 w-32 bg-gray-100 rounded animate-pulse ml-auto" />
           )}
         </div>
 
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-ntz-light font-body hidden sm:block">
+        <div className="flex flex-row-reverse items-center gap-2">
+          <span className="text-xs text-ntz-light font-body hidden sm:block text-right">
             {pins.length} pin{pins.length !== 1 ? 's' : ''}
           </span>
 
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={handleShare}
-            className="flex items-center gap-1.5 btn-gradient text-white text-sm font-semibold px-3.5 py-1.5 rounded-lg shadow-sm hover:opacity-90 transition-opacity"
+            className="flex flex-row-reverse items-center gap-1.5 btn-gradient text-white text-sm font-semibold px-3.5 py-1.5 rounded-lg shadow-sm hover:opacity-90 transition-opacity"
           >
             {copied ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
             <span className="hidden sm:inline">{copied ? 'Copied!' : 'Share'}</span>
@@ -81,7 +81,7 @@ export default function SharedMapPage() {
         ) : (
           <>
             <MapView pins={pins} isOwner={false} readOnly={true} />
-            <PinSidebar pins={pins} onPinSelect={() => {}} />
+            <PinSidebar pins={pins} onPinSelect={() => { }} />
           </>
         )}
       </div>

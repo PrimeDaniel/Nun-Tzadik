@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Trash2, Edit3, X, Image } from 'lucide-react'
+import { ExternalLink, Trash2, Edit3, X, Image, Map, Navigation } from 'lucide-react'
 import { deletePin } from '../../lib/firestore'
 import { getCategoryById } from './pinIcons'
 
@@ -88,6 +88,26 @@ export default function PinPopup({ pin, isOwner, onEdit, onClose }) {
         )}
 
         <div className="flex items-center gap-2 flex-wrap">
+          {/* Navigation buttons */}
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${pin.lat},${pin.lng}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-full transition-colors"
+          >
+            <Map className="w-3 h-3" />
+            Google Maps
+          </a>
+          <a
+            href={`https://waze.com/ul?ll=${pin.lat},${pin.lng}&navigate=yes`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-700 bg-cyan-50 hover:bg-cyan-100 px-3 py-1.5 rounded-full transition-colors"
+          >
+            <Navigation className="w-3 h-3" />
+            Waze
+          </a>
+
           {pin.linkUrl && (
             <a
               href={pin.linkUrl}

@@ -63,3 +63,32 @@ export async function updatePin(pinId, data) {
 export async function deletePin(pinId) {
   await deleteDoc(doc(db, 'pins', pinId))
 }
+
+// ---- Groups ----
+
+export function subscribeToGroups(userId, callback, onError) {
+  const q = query(collection(db, 'groups'), where('userId', '==', userId))
+  return onSnapshot(
+    q,
+    (snapshot) => {
+      const groups = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }))
+      callback(groups)
+    },
+    (error) => {
+      console.error('Firestore groups error:', error)
+      if (onError) onError(error)
+    }
+  )
+}
+
+export async function addGroup(data) {
+  return addDoc(collection(db, 'groups'), { ...data, createdAt: serverTimestamp() })
+}
+
+export async function updateGroup(groupId, data) {
+  await updateDoc(doc(db, 'groups', groupId), data)
+}
+
+export async function deleteGroup(groupId) {
+  await deleteDoc(doc(db, 'groups', groupId))
+}

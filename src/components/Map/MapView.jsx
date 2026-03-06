@@ -1,13 +1,14 @@
 import { useState, useCallback, useEffect } from 'react'
 import { MapContainer, TileLayer, useMapEvents, Marker, useMap } from 'react-leaflet'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Plus, LocateFixed, Loader2 } from 'lucide-react'
+import { Plus, LocateFixed, Loader2, Layers } from 'lucide-react'
 import L from 'leaflet'
 import IsraelProvinces from './IsraelProvinces'
 import CityMarkers from './CityMarkers'
 import PinMarker from './PinMarker'
 import PinPopup from './PinPopup'
 import AddPinModal from './AddPinModal'
+import AddGroupModal from './AddGroupModal'
 import { useAuth } from '../../hooks/useAuth'
 
 // Handles map click for placing pins
@@ -66,6 +67,7 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
   const [editPin, setEditPin] = useState(null)
   const [userLocation, setUserLocation] = useState(null)
   const [locating, setLocating] = useState(false)
+  const [groupModalOpen, setGroupModalOpen] = useState(false)
 
   const handleMapClick = useCallback((latlng) => {
     if (readOnly || !isAdding) return
@@ -158,19 +160,35 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
           }
         </motion.button>
 
-        {/* Add pin (owner only) */}
+        {/* Add pin / Create group (owner only) */}
         {!readOnly && (
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsAdding(!isAdding)}
-            className={`flex items-center gap-2 px-4 py-3 rounded-2xl shadow-ntz-pin text-sm font-semibold font-body transition-all ${
-              isAdding ? 'bg-ntz-dark text-white' : 'btn-gradient text-white'
-            }`}
-          >
-            <Plus className={`w-4 h-4 transition-transform ${isAdding ? 'rotate-45' : ''}`} />
-            {isAdding ? 'Click map to place pin' : 'Add Pin'}
-          </motion.button>
+          <>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsAdding(!isAdding)}
+              className={`flex items-center gap-2 px-4 py-3 rounded-2xl text-sm font-semibold font-body transition-all ${isAdding
+                ? 'bg-ntz-dark text-white shadow-ntz-pin'
+                : 'bg-[#76B7F2] text-white shadow-[0_0_16px_rgba(118,183,242,0.6)] hover:shadow-[0_0_24px_rgba(118,183,242,0.8)] hover:bg-[#68a8e3]'
+                }`}
+            >
+              <Plus className={`w-4 h-4 transition-transform ${isAdding ? 'rotate-45' : ''}`} />
+              {isAdding ? 'Place your pin' : 'Add Pin'}
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setGroupModalOpen(true)}
+              className="flex items-center gap-2 px-4 py-2.5 rounded-2xl shadow-ntz-card text-white text-sm font-semibold font-body btn-gradient hover:opacity-90 transition-opacity"
+            >
+              <Layers className="w-4 h-4" />
+              Create Group
+            </motion.button>
+
+
+          </>
         )}
       </div>
 
@@ -204,13 +222,21 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
         )}
       </AnimatePresence>
 
-      {/* Add / Edit modal */}
+      {/* Add / Edit pin modal */}
       {(pendingLatlng || editPin) && (
         <AddPinModal
           latlng={pendingLatlng}
           editPin={editPin}
           onClose={handleModalClose}
           onSaved={handleSaved}
+        />
+      )}
+
+      {/* Create group modal */}
+      {groupModalOpen && (
+        <AddGroupModal
+          onClose={() => setGroupModalOpen(false)}
+          onSaved={() => setGroupModalOpen(false)}
         />
       )}
     </div>

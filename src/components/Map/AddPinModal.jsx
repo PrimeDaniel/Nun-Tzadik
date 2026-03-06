@@ -6,18 +6,8 @@ import { useAuth } from '../../hooks/useAuth'
 import { PIN_CATEGORIES } from './pinIcons'
 
 const PIN_COLORS = [
-  // Solid colors
   '#7B8EF5', '#62B8F0', '#F06892', '#4CAF7D',
   '#FF8C42', '#FFD166', '#EF233C', '#333333',
-  // Gradient colors
-  'linear-gradient(135deg,#D9DFFF,#BBE1FA,#FFC4D1)',
-  'linear-gradient(135deg,#7B8EF5,#F06892)',
-  'linear-gradient(135deg,#62B8F0,#4CAF7D)',
-  'linear-gradient(135deg,#FF8C42,#FFD166)',
-  'linear-gradient(135deg,#F06892,#FF8C42)',
-  'linear-gradient(135deg,#7B8EF5,#62B8F0,#F06892)',
-  'linear-gradient(135deg,#4CAF7D,#62B8F0)',
-  'linear-gradient(135deg,#EF233C,#7B8EF5)',
 ]
 
 export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {

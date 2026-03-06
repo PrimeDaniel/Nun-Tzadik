@@ -23,18 +23,17 @@ export default function Navbar() {
   }
 
   return (
-    <header className="h-14 bg-white/90 backdrop-blur-md border-b border-ntz-blue/20 flex items-center px-4 gap-3 z-[600] relative shadow-sm">
+    <header className="h-14 bg-white/90 backdrop-blur-md border-b border-ntz-blue/20 flex flex-row-reverse items-center px-4 gap-3 z-[600] relative shadow-sm">
       {/* Logo */}
-      <Link to="/" className="flex items-center gap-2.5 mr-auto">
-        <img src="/Logo.png" alt="Nun-Tzadik" className="h-8" />
-        <span className="font-display font-bold text-ntz-dark text-base hidden sm:block">Nun-Tzadik</span>
+      <Link to="/" className="flex flex-row-reverse items-center gap-2.5 ml-auto">
+        <img src="/nuntzadikheb.png" alt="Nun-Tzadik Text" className="h-5 hidden sm:block object-contain" />
       </Link>
 
       {user ? (
         <>
           <Link
             to="/map"
-            className="flex items-center gap-1.5 text-sm font-medium font-body text-ntz-dark hover:text-ntz-dark/70 transition-colors px-3 py-1.5 rounded-lg hover:bg-ntz-blue/10"
+            className="flex flex-row-reverse items-center gap-1.5 text-sm font-medium font-body text-ntz-dark hover:text-ntz-dark/70 transition-colors px-3 py-1.5 rounded-lg hover:bg-ntz-blue/10"
           >
             <Map className="w-4 h-4" />
             <span className="hidden sm:inline">My Map</span>
@@ -43,7 +42,7 @@ export default function Navbar() {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={handleShare}
-            className="flex items-center gap-1.5 text-sm font-medium font-body btn-gradient text-white px-3.5 py-1.5 rounded-lg shadow-sm hover:opacity-90 transition-opacity"
+            className="flex flex-row-reverse items-center gap-1.5 text-sm font-medium font-body btn-gradient text-white px-3.5 py-1.5 rounded-lg shadow-sm hover:opacity-90 transition-opacity"
           >
             <AnimatePresence mode="wait">
               {copied ? (
@@ -52,7 +51,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
-                  className="flex items-center gap-1.5"
+                  className="flex flex-row-reverse items-center gap-1.5"
                 >
                   <Check className="w-4 h-4" />
                   <span className="hidden sm:inline">Copied!</span>
@@ -63,7 +62,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
-                  className="flex items-center gap-1.5"
+                  className="flex flex-row-reverse items-center gap-1.5"
                 >
                   <Share2 className="w-4 h-4" />
                   <span className="hidden sm:inline">Share Map</span>
