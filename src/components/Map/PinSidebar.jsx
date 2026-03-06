@@ -146,7 +146,7 @@ export default function PinSidebar({ pins, allPinsCount, districts, selectedDist
                   <PinCard
                     key={pin.id}
                     pin={pin}
-                    onClick={(p) => { onPinSelect(p); setOpen(false) }}
+                    onClick={(p) => onPinSelect(p)}
                   />
                 ))
               )}

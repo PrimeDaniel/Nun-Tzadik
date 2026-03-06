@@ -34,6 +34,7 @@ export default function MapPage() {
   const { pins, loading, error } = usePins(user?.uid)
   const [districts, setDistricts] = useState(null)
   const [selectedDistrict, setSelectedDistrict] = useState(null)
+  const [sidebarPin, setSidebarPin] = useState(null)
 
   useEffect(() => {
     fetch('/israel-districts.json')
@@ -75,14 +76,14 @@ export default function MapPage() {
           </div>
         ) : (
           <>
-            <MapView pins={filteredPins} isOwner={true} readOnly={false} />
+            <MapView pins={filteredPins} isOwner={true} readOnly={false} externalPin={sidebarPin} />
             <PinSidebar
               pins={filteredPins}
               allPinsCount={pins.length}
               districts={districts}
               selectedDistrict={selectedDistrict}
               onDistrictChange={setSelectedDistrict}
-              onPinSelect={() => {}}
+              onPinSelect={setSidebarPin}
             />
           </>
         )}

@@ -45,7 +45,20 @@ function UserLocationMarker({ location }) {
   return <Marker position={[location.lat, location.lng]} icon={locationIcon} zIndexOffset={1000} />
 }
 
-export default function MapView({ pins, isOwner = true, readOnly = false }) {
+// Flies to an externally-selected pin (from sidebar) and reveals its popup
+function FlyToPin({ pin, onReady }) {
+  const map = useMap()
+
+  useEffect(() => {
+    if (!pin) return
+    map.flyTo([pin.lat, pin.lng], Math.max(map.getZoom(), 14), { duration: 1.2 })
+    onReady(pin)
+  }, [pin]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  return null
+}
+
+export default function MapView({ pins, isOwner = true, readOnly = false, externalPin }) {
   const { user } = useAuth()
   const [isAdding, setIsAdding] = useState(false)
   const [pendingLatlng, setPendingLatlng] = useState(null)
@@ -125,6 +138,7 @@ export default function MapView({ pins, isOwner = true, readOnly = false }) {
         ))}
 
         <UserLocationMarker location={userLocation} />
+        <FlyToPin key={externalPin?.id + '_' + externalPin?.lat} pin={externalPin} onReady={(pin) => { setSelectedPin(pin); setPendingLatlng(null) }} />
       </MapContainer>
 
       {/* Bottom-right controls */}
