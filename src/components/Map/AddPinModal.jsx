@@ -70,28 +70,31 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
     setSearchQuery(q)
     setSearchResults([])
     clearTimeout(searchTimer.current)
-    if (q.trim().length < 3) return
+    if (q.trim().length < 2) return
     searchTimer.current = setTimeout(async () => {
       try {
+        // Photon geocoder: OSM-based, great for autocomplete, bounding box = Israel
         const res = await fetch(
-          `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=5&countrycodes=il`,
-          { headers: { 'Accept-Language': 'en', 'User-Agent': 'NunTzadikApp/1.0' } }
+          `https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=6&bbox=34.27,29.45,35.90,33.34`
         )
         const data = await res.json()
-        setSearchResults(data)
+        setSearchResults(data.features || [])
       } catch {
         // silently ignore search errors
       }
-    }, 400)
+    }, 350)
   }
 
   function handlePlaceSelect(result) {
-    const coords = { lat: parseFloat(result.lat), lng: parseFloat(result.lon) }
-    setActiveLatlng(coords)
-    setSelectedPlace(result.display_name)
+    const [lon, lat] = result.geometry.coordinates
+    setActiveLatlng({ lat, lng: lon })
+    const p = result.properties
+    const nameParts = [p.name, p.city, p.state].filter(Boolean)
+    const displayName = [...new Set(nameParts)].join(', ')
+    setSelectedPlace(displayName)
     setSearchQuery('')
     setSearchResults([])
-    if (!title) setTitle(result.display_name.split(',')[0])
+    if (!title) setTitle(p.name || displayName.split(',')[0])
   }
 
   function handleFilesSelected(e) {
@@ -215,16 +218,24 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
                 />
                 {searchResults.length > 0 && (
                   <div className="absolute left-0 right-0 top-full mt-1 z-10 bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
-                    {searchResults.map((r, i) => (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => handlePlaceSelect(r)}
-                        className="w-full text-left px-4 py-2.5 text-xs text-ntz-dark hover:bg-ntz-blue/10 transition-colors border-b border-gray-50 last:border-0"
-                      >
-                        {r.display_name.length > 70 ? r.display_name.slice(0, 70) + '…' : r.display_name}
-                      </button>
-                    ))}
+                    {searchResults.map((r, i) => {
+                      const p = r.properties
+                      return (
+                        <button
+                          key={i}
+                          type="button"
+                          onClick={() => handlePlaceSelect(r)}
+                          className="w-full text-left px-4 py-2.5 text-xs text-ntz-dark hover:bg-ntz-blue/10 transition-colors border-b border-gray-50 last:border-0"
+                        >
+                          <span className="font-medium">{p.name}</span>
+                          {(p.city || p.state) && (
+                            <span className="text-ntz-light ml-1">
+                              — {[p.city, p.state].filter(Boolean).join(', ')}
+                            </span>
+                          )}
+                        </button>
+                      )
+                    })}
                   </div>
                 )}
                 {selectedPlace && (
