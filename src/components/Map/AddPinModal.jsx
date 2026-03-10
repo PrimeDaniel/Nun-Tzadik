@@ -7,7 +7,6 @@ import { useUpload } from '../../lib/UploadContext'
 import { PIN_CATEGORIES } from './pinIcons'
 
 const MAX_IMAGES = 15
-const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN
 
 const PIN_COLORS = [
   '#7B8EF5', '#62B8F0', '#F06892', '#4CAF7D',
@@ -71,31 +70,28 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
     setSearchQuery(q)
     setSearchResults([])
     clearTimeout(searchTimer.current)
-    if (q.trim().length < 2) return
+    if (q.trim().length < 3) return
     searchTimer.current = setTimeout(async () => {
       try {
         const res = await fetch(
-          `https://api.mapbox.com/search/geocode/v6/forward?q=${encodeURIComponent(q)}&country=il&limit=6&language=en,he&access_token=${MAPBOX_TOKEN}`
+          `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=5&countrycodes=il`,
+          { headers: { 'Accept-Language': 'en', 'User-Agent': 'NunTzadikApp/1.0' } }
         )
         const data = await res.json()
-        setSearchResults(data.features || [])
+        setSearchResults(data)
       } catch {
         // silently ignore search errors
       }
-    }, 250)
+    }, 400)
   }
 
   function handlePlaceSelect(result) {
-    const [lon, lat] = result.geometry.coordinates
-    setActiveLatlng({ lat, lng: lon })
-    const p = result.properties
-    const displayName = p.place_formatted
-      ? `${p.name}, ${p.place_formatted}`
-      : p.name
-    setSelectedPlace(displayName)
+    const coords = { lat: parseFloat(result.lat), lng: parseFloat(result.lon) }
+    setActiveLatlng(coords)
+    setSelectedPlace(result.display_name)
     setSearchQuery('')
     setSearchResults([])
-    if (!title) setTitle(p.name)
+    if (!title) setTitle(result.display_name.split(',')[0])
   }
 
   function handleFilesSelected(e) {
@@ -219,22 +215,16 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
                 />
                 {searchResults.length > 0 && (
                   <div className="absolute left-0 right-0 top-full mt-1 z-10 bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
-                    {searchResults.map((r, i) => {
-                      const p = r.properties
-                      return (
-                        <button
-                          key={i}
-                          type="button"
-                          onClick={() => handlePlaceSelect(r)}
-                          className="w-full text-left px-4 py-2.5 text-xs text-ntz-dark hover:bg-ntz-blue/10 transition-colors border-b border-gray-50 last:border-0"
-                        >
-                          <span className="font-medium">{p.name}</span>
-                          {p.place_formatted && (
-                            <span className="text-ntz-light ml-1">— {p.place_formatted}</span>
-                          )}
-                        </button>
-                      )
-                    })}
+                    {searchResults.map((r, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => handlePlaceSelect(r)}
+                        className="w-full text-left px-4 py-2.5 text-xs text-ntz-dark hover:bg-ntz-blue/10 transition-colors border-b border-gray-50 last:border-0"
+                      >
+                        {r.display_name.length > 70 ? r.display_name.slice(0, 70) + '…' : r.display_name}
+                      </button>
+                    ))}
                   </div>
                 )}
                 {selectedPlace && (
