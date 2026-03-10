@@ -7,6 +7,7 @@ import { useUpload } from '../../lib/UploadContext'
 import { PIN_CATEGORIES } from './pinIcons'
 
 const MAX_IMAGES = 15
+const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN
 
 const PIN_COLORS = [
   '#7B8EF5', '#62B8F0', '#F06892', '#4CAF7D',
@@ -73,28 +74,28 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
     if (q.trim().length < 2) return
     searchTimer.current = setTimeout(async () => {
       try {
-        // Photon geocoder: OSM-based, great for autocomplete, bounding box = Israel
         const res = await fetch(
-          `https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=6&bbox=34.27,29.45,35.90,33.34`
+          `https://api.mapbox.com/search/geocode/v6/forward?q=${encodeURIComponent(q)}&country=il&limit=6&language=en,he&access_token=${MAPBOX_TOKEN}`
         )
         const data = await res.json()
         setSearchResults(data.features || [])
       } catch {
         // silently ignore search errors
       }
-    }, 350)
+    }, 250)
   }
 
   function handlePlaceSelect(result) {
     const [lon, lat] = result.geometry.coordinates
     setActiveLatlng({ lat, lng: lon })
     const p = result.properties
-    const nameParts = [p.name, p.city, p.state].filter(Boolean)
-    const displayName = [...new Set(nameParts)].join(', ')
+    const displayName = p.place_formatted
+      ? `${p.name}, ${p.place_formatted}`
+      : p.name
     setSelectedPlace(displayName)
     setSearchQuery('')
     setSearchResults([])
-    if (!title) setTitle(p.name || displayName.split(',')[0])
+    if (!title) setTitle(p.name)
   }
 
   function handleFilesSelected(e) {
@@ -228,10 +229,8 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
                           className="w-full text-left px-4 py-2.5 text-xs text-ntz-dark hover:bg-ntz-blue/10 transition-colors border-b border-gray-50 last:border-0"
                         >
                           <span className="font-medium">{p.name}</span>
-                          {(p.city || p.state) && (
-                            <span className="text-ntz-light ml-1">
-                              — {[p.city, p.state].filter(Boolean).join(', ')}
-                            </span>
+                          {p.place_formatted && (
+                            <span className="text-ntz-light ml-1">— {p.place_formatted}</span>
                           )}
                         </button>
                       )

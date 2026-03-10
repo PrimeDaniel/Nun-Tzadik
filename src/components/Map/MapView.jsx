@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, useMapEvents, Marker, useMap } from 'react-leaflet'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, LocateFixed, Loader2, Layers } from 'lucide-react'
@@ -11,14 +11,92 @@ import AddPinModal from './AddPinModal'
 import AddGroupModal from './AddGroupModal'
 import { useAuth } from '../../hooks/useAuth'
 
-// Handles map click for placing pins
-function MapClickHandler({ onMapClick }) {
-  useMapEvents({
-    click(e) {
-      onMapClick(e.latlng)
-    },
+// Handles map click for placing pins, with support for touch-and-hold precise dragging
+function MapAddPinInteraction({ isAdding, onPinPlaced }) {
+  const map = useMap()
+  const [dragMarker, setDragMarker] = useState(null)
+
+  const timerRef = useRef()
+  const dragRef = useRef(false)
+  const ignoreClick = useRef(false)
+
+  // Floating pin icon, offset diagonally from touch point so finger doesn't obscure the placement point
+  const dragIcon = L.divIcon({
+    html: `
+      <div style="position:relative;width:44px;height:52px;opacity:0.95;">
+        <div style="
+          width:40px;height:40px;
+          border-radius:50%;
+          background:#7B8EF5;
+          border:3px solid white;
+          box-shadow:0 4px 12px rgba(0,0,0,0.35);
+          display:flex;align-items:center;justify-content:center;
+          font-size:20px;line-height:1;user-select:none;
+          margin:0 auto;
+        ">📍</div>
+        <div style="
+          width:12px;height:10px;
+          background:#7B8EF5;
+          clip-path:polygon(50% 100%,0% 0%,100% 0%);
+          margin:0 auto;
+        "></div>
+      </div>
+    `,
+    className: '',
+    iconSize: [44, 52],
+    iconAnchor: [22, 52], // Tip of the pin
   })
-  return null
+
+  // Returns latlng offset (above and to left) of finger pixel so user can precisely see the tip
+  const getOffsetLatLng = (e) => {
+    if (!e.containerPoint) return e.latlng
+    const point = e.containerPoint.clone()
+    point.y -= 70 // Up by 70px
+    point.x -= 30 // Left by 30px
+    return map.containerPointToLatLng(point)
+  }
+
+  useMapEvents({
+    mousedown(e) {
+      if (!isAdding) return
+      ignoreClick.current = false
+      timerRef.current = setTimeout(() => {
+        dragRef.current = true
+        map.dragging.disable()
+        setDragMarker(getOffsetLatLng(e))
+      }, 350)
+    },
+    mousemove(e) {
+      if (dragRef.current) {
+        setDragMarker(getOffsetLatLng(e))
+      }
+    },
+    mouseup(e) {
+      clearTimeout(timerRef.current)
+      if (dragRef.current) {
+        dragRef.current = false
+        ignoreClick.current = true
+        map.dragging.enable()
+        const finalPos = dragMarker || getOffsetLatLng(e)
+        setDragMarker(null)
+        // Delay resetting ignoreClick so the immediate click event afterwards is captured
+        setTimeout(() => { ignoreClick.current = false }, 100)
+        onPinPlaced(finalPos)
+      }
+    },
+    dragstart() {
+      // Clear timer if user starts panning map quickly
+      clearTimeout(timerRef.current)
+    },
+    click(e) {
+      if (!isAdding || ignoreClick.current) return
+      onPinPlaced(e.latlng)
+    }
+  })
+
+  return dragMarker ? (
+    <Marker position={dragMarker} icon={dragIcon} zIndexOffset={9999} interactive={false} />
+  ) : null
 }
 
 // Flies map to location when it changes, renders the "you are here" marker
@@ -133,7 +211,7 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
         <IsraelProvinces />
         <CityMarkers />
 
-        <MapClickHandler onMapClick={handleMapClick} />
+        <MapAddPinInteraction isAdding={isAdding} onPinPlaced={handleMapClick} />
 
         {pins.map((pin) => (
           <PinMarker key={pin.id} pin={pin} onClick={handlePinClick} />
