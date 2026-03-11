@@ -36,6 +36,7 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
   const [searchResults, setSearchResults] = useState([])
   const [selectedPlace, setSelectedPlace] = useState(null)
   const [activeLatlng, setActiveLatlng] = useState(latlng)
+  const [locationMode, setLocationMode] = useState('map') // 'map' or 'search'
   const searchTimer = useRef(null)
 
   // Pre-fill when editing
@@ -57,8 +58,15 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
   }, [editPin])
 
   useEffect(() => {
-    setActiveLatlng(latlng)
-  }, [latlng])
+    if (locationMode === 'map') {
+      setActiveLatlng(latlng)
+      setSelectedPlace(null)
+    } else if (latlng) {
+      // If we are in search mode but we receive a new latlng prop (user clicked map)
+      // We might want to switch back to map mode, or just update the activeLatlng
+      setActiveLatlng(latlng)
+    }
+  }, [latlng, locationMode])
 
   // Cleanup object URLs on unmount
   useEffect(() => {
@@ -199,44 +207,89 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
           </div>
 
           <form onSubmit={handleSubmit} className="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
-            {/* Place search */}
+            {/* Location Mode & Place search */}
             {!editPin && (
-              <div className="relative">
-                <label className="block text-xs font-medium text-ntz-dark mb-1.5">
-                  <Search className="inline w-3 h-3 mr-1" />
-                  Search for a place
-                </label>
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={handleSearchInput}
-                  placeholder="Type a place name in Israel..."
-                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-ntz-blue focus:ring-2 focus:ring-ntz-blue/20 outline-none text-sm text-ntz-dark placeholder:text-ntz-light transition-all"
-                />
-                {searchResults.length > 0 && (
-                  <div className="absolute left-0 right-0 top-full mt-1 z-10 bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
-                    {searchResults.map((r, i) => (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => handlePlaceSelect(r)}
-                        className="w-full text-left px-4 py-2.5 text-xs text-ntz-dark hover:bg-ntz-blue/10 transition-colors border-b border-gray-50 last:border-0"
+              <div className="space-y-3">
+                <div className="flex bg-gray-100 p-1 rounded-xl">
+                  <button
+                    type="button"
+                    onClick={() => setLocationMode('map')}
+                    className={`flex-1 py-2 text-xs font-medium rounded-lg transition-all flex items-center justify-center gap-1.5 ${locationMode === 'map'
+                        ? 'bg-white text-ntz-blue shadow-sm'
+                        : 'text-gray-500 hover:text-ntz-dark hover:bg-gray-200/50'
+                      }`}
+                  >
+                    <MapPin className="w-3.5 h-3.5" />
+                    Use Map Pin
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLocationMode('search')}
+                    className={`flex-1 py-2 text-xs font-medium rounded-lg transition-all flex items-center justify-center gap-1.5 ${locationMode === 'search'
+                        ? 'bg-white text-ntz-blue shadow-sm'
+                        : 'text-gray-500 hover:text-ntz-dark hover:bg-gray-200/50'
+                      }`}
+                  >
+                    <Search className="w-3.5 h-3.5" />
+                    Search Location
+                  </button>
+                </div>
+
+                <div className="relative">
+                  <AnimatePresence mode="popLayout">
+                    {locationMode === 'search' ? (
+                      <motion.div
+                        key="search"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
                       >
-                        {r.display_name.length > 70 ? r.display_name.slice(0, 70) + '…' : r.display_name}
-                      </button>
-                    ))}
-                  </div>
-                )}
-                {selectedPlace && (
-                  <p className="text-xs text-green-600 mt-1 font-medium">
-                    Pinning: {selectedPlace.split(',')[0]}
-                  </p>
-                )}
-                {activeLatlng && !selectedPlace && (
-                  <p className="text-xs text-ntz-light mt-1">
-                    Map click: {activeLatlng.lat.toFixed(4)}, {activeLatlng.lng.toFixed(4)}
-                  </p>
-                )}
+                        <input
+                          type="text"
+                          value={searchQuery}
+                          onChange={handleSearchInput}
+                          placeholder="Type a place name in Israel..."
+                          autoFocus
+                          className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-ntz-blue focus:ring-2 focus:ring-ntz-blue/20 outline-none text-sm text-ntz-dark placeholder:text-ntz-light transition-all"
+                        />
+                        {searchResults.length > 0 && (
+                          <div className="absolute left-0 right-0 top-full mt-1 z-10 bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
+                            {searchResults.map((r, i) => (
+                              <button
+                                key={i}
+                                type="button"
+                                onClick={() => handlePlaceSelect(r)}
+                                className="w-full text-left px-4 py-2.5 text-xs text-ntz-dark hover:bg-ntz-blue/10 transition-colors border-b border-gray-50 last:border-0"
+                              >
+                                {r.display_name.length > 70 ? r.display_name.slice(0, 70) + '…' : r.display_name}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                        {selectedPlace && (
+                          <p className="text-xs text-green-600 mt-2 font-medium ml-1">
+                            Selected: {selectedPlace.split(',')[0]}
+                          </p>
+                        )}
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        key="map"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="px-4 py-3 bg-gray-50 rounded-xl border border-gray-200 flex flex-col justify-center"
+                      >
+                        <span className="text-xs font-medium text-ntz-dark mb-1">Current Map Pin</span>
+                        <span className="text-xs text-ntz-light">
+                          {activeLatlng?.lat?.toFixed(5)}, {activeLatlng?.lng?.toFixed(5)}
+                        </span>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </div>
             )}
 
@@ -250,11 +303,10 @@ export default function AddPinModal({ latlng, editPin, onClose, onSaved }) {
                     type="button"
                     onClick={() => setIconType(cat.id)}
                     title={cat.label}
-                    className={`relative flex flex-col items-center justify-center py-2 px-1 rounded-xl border-2 transition-all text-xl ${
-                      iconType === cat.id
+                    className={`relative flex flex-col items-center justify-center py-2 px-1 rounded-xl border-2 transition-all text-xl ${iconType === cat.id
                         ? 'border-ntz-pink bg-ntz-pink/10 shadow-sm'
                         : 'border-gray-100 hover:border-ntz-blue/50 bg-gray-50'
-                    }`}
+                      }`}
                   >
                     {cat.emoji}
                     {iconType === cat.id && (
