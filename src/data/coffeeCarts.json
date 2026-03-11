@@ -1,137 +1,3442 @@
 [
-    {
-        "id": "cart-1",
-        "name": "הקטפת קפה במשק",
-        "location": "בית שערים",
-        "description": "הקטפת הינה עגלת קפה חדשה במושב בית שערים בעמק יזרעאל",
-        "lat": 32.69174,
-        "lng": 35.17548,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-2",
-        "name": "קפה ג'וני",
-        "location": "כביש 90 מול מושב מחולה",
-        "description": "קפה ג'וני הינה עגלת קפה חדשה קרוב למושב מחולה בבקעת הירדן",
-        "lat": 32.3654755,
-        "lng": 35.515683,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-3",
-        "name": "קפאלה",
-        "location": "קיבוץ כרמים",
-        "description": "במתחם כפרי בקיבוץ כרמים, לצד צמחייה וטבע, שוכנת עגלת הקפה 'קפאלה' של אלה שמחון",
-        "lat": 31.331215,
-        "lng": 34.917679,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-4",
-        "name": "הישראליות",
-        "location": "הזריחה קיבוץ דברת",
-        "description": "הישראליות הינה עגלת קפה חדשה הנמצאת במצפה ישראלי בסמוך לקיבוץ דברת",
-        "lat": 32.644994,
-        "lng": 35.351837,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-5",
-        "name": "קפה לה בוסתן",
-        "location": "גן חושים, מושב מזור",
-        "description": "עגלת הקפה 'לה בוסתן' של אייר ואלי ממוקמת בלב בוסתן פסטורלי במושב מזור.",
-        "lat": 32.052022,
-        "lng": 34.923603,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-6",
-        "name": "צוקפה",
-        "location": "תל ירח ליד תיכון בית ירח",
-        "description": "צוקפה הינה עגלת קפה חדשה הנמצאת בבית ירח ליד הירח",
-        "lat": 32.71606,
-        "lng": 35.573304,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-7",
-        "name": "אלקע בר",
-        "location": "עין זיוון",
-        "description": "בקיבוץ עין זיון, ברחבת דשא נעימה נמצאת עגלת הקפה 'אלקע בר' של דור ועילי",
-        "lat": 33.097136,
-        "lng": 35.798364,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-8",
-        "name": "על המזח",
-        "location": "טיילת בת ים, מול המזח",
-        "description": "בלב טיילת בת ים, ליד המזח המפורסם, הקים אביב את עגלת הקפה 'על המזח'.",
-        "lat": 32.01558,
-        "lng": 34.738249,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-9",
-        "name": "קטרינה",
-        "location": "כפר דניאל",
-        "description": "עגלת קפה קטרינה שוכנת בלב פארק הקופים בכפר דניאל",
-        "lat": 31.943968,
-        "lng": 34.933067,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-10",
-        "name": "עגלתא",
-        "location": "החרוב בני דרור",
-        "description": "בחורשה פסטורלית במושב בני דרור, שוכנת עגלת הקפה 'עגלתא' של אמיר ליפשיץ",
-        "lat": 32.26053,
-        "lng": 34.903111,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-11",
-        "name": "אביולה",
-        "location": "צופים",
-        "description": "את עגלת הקפה 'אביולה' הקימו יפעת ואלעד בצופים כדי להנציח את בתם אביה בטבע.",
-        "lat": 32.196357,
-        "lng": 35.003107,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-12",
-        "name": "סיפתח אפרת",
-        "location": "הדגן 1, אפרת",
-        "description": "בפארק אמות המים היפהפה שבמועצה המקומית אפרת הקים משה את עגלת הקפה 'סיפתח'",
-        "lat": 31.682119,
-        "lng": 35.169541,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-13",
-        "name": "עגלת קפה משתלות יגור",
-        "location": "קיבוץ יגור, משתלת יגור",
-        "description": "עגלת קפה מרווחת עם מגוון גדול של מאפים מלוחים ומתוקים וקפה משובח",
-        "lat": 32.749927,
-        "lng": 35.070529,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-14",
-        "name": "קפה יער",
-        "location": "בית לחם הגלילית",
-        "description": "בית קפה FARM 2 TABLE רואים את התוצרת בעיניים, גדלה משני צידי הקפה, בפרקטיקות של חקלאות בת-קיימא.",
-        "lat": 32.731546,
-        "lng": 35.185492,
-        "icon": "☕"
-    },
-    {
-        "id": "cart-15",
-        "name": "הגילברט׳ס The Gilberts",
-        "location": "קיבוץ רמת השופט",
-        "description": "הגילברט׳ס הינה עגלת קפה חדשה הנמצאת בקיבוץ רמת השופט",
-        "lat": 32.611434,
-        "lng": 35.095289,
-        "icon": "☕"
-    }
+  {
+    "id": "cart-1",
+    "name": "קפה בחצר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בחצר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.1507632,
+    "lng": 34.92203951,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafebahatzer/"
+  },
+  {
+    "id": "cart-2",
+    "name": "מישקא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מישקא, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.2276725,
+    "lng": 34.9172383,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mishka/"
+  },
+  {
+    "id": "cart-3",
+    "name": "פאולינה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פאולינה בבית חנן , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.935689,
+    "lng": 34.769347,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/paulina/"
+  },
+  {
+    "id": "cart-4",
+    "name": "ילדתי שלי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ילדתי שלי באבו גוש, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.80078,
+    "lng": 35.12269,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yaldati-sheli/"
+  },
+  {
+    "id": "cart-5",
+    "name": "דורא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דורא בישוב נוב ברמת הגולן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.830556,
+    "lng": 35.789,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/dura-caffe/"
+  },
+  {
+    "id": "cart-6",
+    "name": "קפה רוקא Cafe Rooka",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה רוקא Cafe Rooka בעין המפרץ , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.902297,
+    "lng": 35.09634,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-rooka/"
+  },
+  {
+    "id": "cart-7",
+    "name": "האסם",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה האסם באפק, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.8382936737637,
+    "lng": 35.12777,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hasam-afek/"
+  },
+  {
+    "id": "cart-8",
+    "name": "קפה צ׳צ׳ו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה צ׳צ׳ו הנמצאת בעצמון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.860517,
+    "lng": 35.258445,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-chachu/"
+  },
+  {
+    "id": "cart-9",
+    "name": "קפה תומאס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה תומאס בכפר מסריק, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.8912313,
+    "lng": 35.0984067,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/czecholita-cafe/"
+  },
+  {
+    "id": "cart-10",
+    "name": "קפה קרתא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה קרתא בעתלית, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.701389,
+    "lng": 34.942988,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/karta/"
+  },
+  {
+    "id": "cart-11",
+    "name": "עיישה בגבעה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עיישה בגבעה בגבעת אבני, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.7745463,
+    "lng": 35.435364,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/aiyshaa-b/"
+  },
+  {
+    "id": "cart-12",
+    "name": "גוגה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גוגה קפה בכפר יחזקאל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.5653133,
+    "lng": 35.3605976,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/guga-coffee/"
+  },
+  {
+    "id": "cart-13",
+    "name": "קפה בנחל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בנחל במדרך עוז, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.599543,
+    "lng": 35.162787,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-banahal/"
+  },
+  {
+    "id": "cart-14",
+    "name": "נהלולה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה נהלולה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.6897354,
+    "lng": 35.1969993,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/nahalula/"
+  },
+  {
+    "id": "cart-15",
+    "name": "ברולי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ברולי - Beroli בגניגר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.662709,
+    "lng": 35.258363,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/beroli/"
+  },
+  {
+    "id": "cart-16",
+    "name": "הצריף",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הצריף ביוגב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.606647,
+    "lng": 35.1909,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ha-tzrif/"
+  },
+  {
+    "id": "cart-17",
+    "name": "קפה הכפר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה הכפר בכפר יחזקאל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.567697,
+    "lng": 35.361721,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-hakfar/"
+  },
+  {
+    "id": "cart-18",
+    "name": "תחנת קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה תחנת קפה בכפר יהושוע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.6723572,
+    "lng": 35.1514967,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/tahanat-cafe/"
+  },
+  {
+    "id": "cart-19",
+    "name": "מאשקה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מאשקה - Mashka במושב דור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.378365,
+    "lng": 34.983982,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mashka/"
+  },
+  {
+    "id": "cart-20",
+    "name": "קפה אתטורכ",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה אתטורכ במרכז מיר\"ב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.6510298,
+    "lng": 34.9595344,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/caffe-ataturk/"
+  },
+  {
+    "id": "cart-21",
+    "name": "CAWE",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה CAWE בעין שמר , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.461561,
+    "lng": 35.005893,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cawe/"
+  },
+  {
+    "id": "cart-22",
+    "name": "בבושקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בבושקפה קיסריה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.473023,
+    "lng": 34.948012,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/babushcoffee/"
+  },
+  {
+    "id": "cart-23",
+    "name": "סטודיו שמואלי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה סטודיו שמואלי בעין הוד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.69984,
+    "lng": 34.975361,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shmueli-studio/"
+  },
+  {
+    "id": "cart-24",
+    "name": "שרקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שרקפה במאור , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.423019,
+    "lng": 35.006509,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/sarcafe-maor/"
+  },
+  {
+    "id": "cart-25",
+    "name": "ימינ&#039;ס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ימינ&#039;ס - yamins ניצני עוז, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.305042,
+    "lng": 35.004939,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yamins/"
+  },
+  {
+    "id": "cart-26",
+    "name": "עגלת קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלת קפה במושב ידידיה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.34759,
+    "lng": 34.8986456,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/eglat-cafe/"
+  },
+  {
+    "id": "cart-27",
+    "name": "פוזלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פוזלה בישוב בורגתא, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.32665,
+    "lng": 34.96404,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/poza-le-cafe/"
+  },
+  {
+    "id": "cart-28",
+    "name": "עגלה של קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלה של קפה חניאל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.332487,
+    "lng": 34.950178,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agala-shel-cafe/"
+  },
+  {
+    "id": "cart-29",
+    "name": "שושק׳ה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שושק׳ה ברעננה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.181403,
+    "lng": 34.857252,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shoshke/"
+  },
+  {
+    "id": "cart-30",
+    "name": "באבא קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה באבא קפה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.29249,
+    "lng": 34.998241,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/thebaba-cafe/"
+  },
+  {
+    "id": "cart-31",
+    "name": "עגלה בכפר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלה בכפר הוד השרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.150804,
+    "lng": 34.884965,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agala-bakfar/"
+  },
+  {
+    "id": "cart-32",
+    "name": "העגלה של גילי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה העגלה של גילי באביחייל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.35091,
+    "lng": 34.87656,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hagala-shel-gili/"
+  },
+  {
+    "id": "cart-33",
+    "name": "פטיט קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פטיט קפה בישוב צור משה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.2997883,
+    "lng": 34.907778,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/petitcafe/"
+  },
+  {
+    "id": "cart-34",
+    "name": "אריקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אריקפה במכמורת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.4049278,
+    "lng": 34.873589,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/arik-cafe/"
+  },
+  {
+    "id": "cart-35",
+    "name": "לה פרינה LA FARINA",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה לה פרינה LA FARINA גני תקווה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.065715,
+    "lng": 34.87024,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/la-farina-truck/"
+  },
+  {
+    "id": "cart-36",
+    "name": "קפה ארץ",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ארץ בעגור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.69369,
+    "lng": 34.914615,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-eretz/"
+  },
+  {
+    "id": "cart-37",
+    "name": "MINA TRACK",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה MINA TRACK ביער חולדה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.824544,
+    "lng": 34.892873,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mina-track/"
+  },
+  {
+    "id": "cart-38",
+    "name": "קפה פפיטה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה פפיטה בכפר בילו, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.8740651,
+    "lng": 34.826059,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/pepita-coffee/"
+  },
+  {
+    "id": "cart-39",
+    "name": "Cafe La Maya",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה Cafe La Maya בטל שחר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.808177,
+    "lng": 34.913559,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-la-maya/"
+  },
+  {
+    "id": "cart-40",
+    "name": "מלכה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מלכה בישוב צרעה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.761774,
+    "lng": 34.967112,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/malka/"
+  },
+  {
+    "id": "cart-41",
+    "name": "איתיאלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה איתיאלה במושב מטע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.716343,
+    "lng": 35.059254,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ithielahb/"
+  },
+  {
+    "id": "cart-42",
+    "name": "קפה ביער",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ביער בבית זית, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.7847904,
+    "lng": 35.1703108,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafebayaar/"
+  },
+  {
+    "id": "cart-43",
+    "name": "דרייב קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דרייב קפה מחלף שורש, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.80168,
+    "lng": 35.078289,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/drive-cafe/"
+  },
+  {
+    "id": "cart-44",
+    "name": "משב פוד טראקס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה משב פוד טראקס בשואבה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.801493,
+    "lng": 35.077018,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/%d7%9e%d7%a9%d7%91-%d7%a4%d7%95%d7%93-%d7%98%d7%a8%d7%90%d7%a7%d7%a1/"
+  },
+  {
+    "id": "cart-45",
+    "name": "או לה לה oohlalalee",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה או לה לה oohlalalee בחצבה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 30.768079,
+    "lng": 35.279071,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/oohlalalee/"
+  },
+  {
+    "id": "cart-46",
+    "name": "קפה תמר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה תמר במשמר הנגב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.366533,
+    "lng": 34.71556,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/tamar/"
+  },
+  {
+    "id": "cart-47",
+    "name": "קפה צ&#039;לה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה צ&#039;לה נירעם, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.519151,
+    "lng": 34.579579,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/chella-coffee/"
+  },
+  {
+    "id": "cart-48",
+    "name": "הגן הסודי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הגן הסודי בשדה עוזיהו, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.760529,
+    "lng": 34.66989,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/thesecretgarden/"
+  },
+  {
+    "id": "cart-49",
+    "name": "קפסולה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפסולה קרוב לבית קמה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.441354,
+    "lng": 34.761096,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cupsolla/"
+  },
+  {
+    "id": "cart-50",
+    "name": "גלנדריה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גלנדריה בשדה בוקר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 30.88883,
+    "lng": 34.79268,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/glenderia/"
+  },
+  {
+    "id": "cart-51",
+    "name": "לויה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה לויה בנטע , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.478708,
+    "lng": 34.925368,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/loya/"
+  },
+  {
+    "id": "cart-52",
+    "name": "העגלה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה העגלה קפה במושב רשפון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.20142,
+    "lng": 34.820167,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agala-rishpon/"
+  },
+  {
+    "id": "cart-53",
+    "name": "צופציק",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה צ&#039;ופצ&#039;יק - בית יהושוע בית יהושוע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.25925,
+    "lng": 34.8655176,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/chupchik/"
+  },
+  {
+    "id": "cart-54",
+    "name": "ברל שמרל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ברל שמרל במשמר העמק, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.609375,
+    "lng": 35.137947,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/berelshmerel/"
+  },
+  {
+    "id": "cart-55",
+    "name": "מאגמה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מאגמה קפה ברמת רזיאל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.776449,
+    "lng": 35.071888,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/magma/"
+  },
+  {
+    "id": "cart-56",
+    "name": "יענקל&#039;ה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה יענקל&#039;ה בקיבוץ הזורע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.645495,
+    "lng": 35.124843,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yankale-coffee/"
+  },
+  {
+    "id": "cart-57",
+    "name": "קפה עם",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה עם בגבעת ח\"ן ברעננה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.167145,
+    "lng": 34.874722,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-am/"
+  },
+  {
+    "id": "cart-58",
+    "name": "קפה דידי (קפהג&#039;רה)",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה דידי (קפהג&#039;רה), שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.754085,
+    "lng": 35.407455,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-didi/"
+  },
+  {
+    "id": "cart-59",
+    "name": "עגלת קפה החורשה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלת קפה החורשה במושב חמד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.018945,
+    "lng": 34.840715,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hachursha/"
+  },
+  {
+    "id": "cart-60",
+    "name": "רגע במושב",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה רגע במושב מושב נבטים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.222951,
+    "lng": 34.882815,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/rega-bamoshav/"
+  },
+  {
+    "id": "cart-61",
+    "name": "אלפרד",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אלפרד בתל מונד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.251993,
+    "lng": 34.922473,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/alfred-coffeetruck/"
+  },
+  {
+    "id": "cart-62",
+    "name": "קפה במצפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה במצפה ביאנוח ג&#039;ת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.978618,
+    "lng": 35.233734,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/coffe-bmitzpe/"
+  },
+  {
+    "id": "cart-63",
+    "name": "העגלה בניצנים",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה העגלה בניצנים בניצנים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.716994,
+    "lng": 34.633309,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/haagalanitzanim/"
+  },
+  {
+    "id": "cart-64",
+    "name": "קפה אצל ברטה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה אצל ברטה בשעלבים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.875364,
+    "lng": 34.969253,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/coffee_etzel_berta-sh/"
+  },
+  {
+    "id": "cart-65",
+    "name": "הנודדת",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הנודדת בקיבוץ בית אלפא, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.518433,
+    "lng": 35.432072,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hanodedet/"
+  },
+  {
+    "id": "cart-66",
+    "name": "קפה חמה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה חמה במבוא חמה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.7313,
+    "lng": 35.65263,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-hamma/"
+  },
+  {
+    "id": "cart-67",
+    "name": "מיטלוש",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מיטלוש רמות מנשה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.60007,
+    "lng": 35.06162,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/meetlush/"
+  },
+  {
+    "id": "cart-68",
+    "name": "פודטראק בגן",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פודטראק בגן, בירושלים שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.7621,
+    "lng": 35.19878,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/%d7%a4%d7%95%d7%93%d7%98%d7%a8%d7%90%d7%a7-%d7%91%d7%92%d7%9f/"
+  },
+  {
+    "id": "cart-69",
+    "name": "Mood",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה Mood בקיבוץ אלונים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.7178,
+    "lng": 35.14297,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mood/"
+  },
+  {
+    "id": "cart-70",
+    "name": "קפה ברקאי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ברקאי אבנת ים המלח, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.679937,
+    "lng": 35.437943,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-barkay/"
+  },
+  {
+    "id": "cart-71",
+    "name": "נא קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה נא קפה בקיבוץ עברון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.991809,
+    "lng": 35.100409,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/na-caffee/"
+  },
+  {
+    "id": "cart-72",
+    "name": "קפה פסיפלורה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה פסיפלורה בכפר גלים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.766138,
+    "lng": 34.959508,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/pasiflora-galim/"
+  },
+  {
+    "id": "cart-73",
+    "name": "קפה לה רוסה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה לה רוסה במזכרת בתיה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.843979,
+    "lng": 34.836037,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe_larosa/"
+  },
+  {
+    "id": "cart-74",
+    "name": "קפה בקצה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בקצה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.824882,
+    "lng": 35.403636,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafebakatze/"
+  },
+  {
+    "id": "cart-75",
+    "name": "דודה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דודה קפה,בגבעת שמואל שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.084949,
+    "lng": 34.850628,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/doda-cafe/"
+  },
+  {
+    "id": "cart-76",
+    "name": "מיימונס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מיימונס - מקום בכפר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.431223,
+    "lng": 34.538201,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/maimons-bakfar/"
+  },
+  {
+    "id": "cart-77",
+    "name": "הפרדס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הפרדס במעלה אדומים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.769478,
+    "lng": 35.296304,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hapardes/"
+  },
+  {
+    "id": "cart-78",
+    "name": "ויטוריה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ויטוריה קפה בהר הטייסים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.7744327,
+    "lng": 35.09001,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/vitorya/"
+  },
+  {
+    "id": "cart-79",
+    "name": "קפה גולדי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה גולדי במטולה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.27599,
+    "lng": 35.580876,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/goldie/"
+  },
+  {
+    "id": "cart-80",
+    "name": "קפה אחו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה אחו בכליל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.982504,
+    "lng": 35.197335,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/acu-coffee-clil/"
+  },
+  {
+    "id": "cart-81",
+    "name": "דלוש&#039;ס D&#039;Lusha&#039;s",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דלוש&#039;ס D&#039;Lusha&#039;s בגני תקווה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.062762,
+    "lng": 34.871571,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/dlushas/"
+  },
+  {
+    "id": "cart-82",
+    "name": "קפה שלווה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה שלווה בירושלים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.76742,
+    "lng": 35.187388,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shalva/"
+  },
+  {
+    "id": "cart-83",
+    "name": "עיינה AYANA",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עיינה AYANA בעין הנצי\"ב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.472388,
+    "lng": 35.503143,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ayana/"
+  },
+  {
+    "id": "cart-84",
+    "name": "קפה מוייז",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה מוייז במושב רמות , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.851228,
+    "lng": 35.663687,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-moize/"
+  },
+  {
+    "id": "cart-85",
+    "name": "קפסיטו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפסיטו - Cafesito ברמת השרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.137099,
+    "lng": 34.830426,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafesito_ramathasharon/"
+  },
+  {
+    "id": "cart-86",
+    "name": "בייגלס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בייגלס בקיבוץ הגושרים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.2184003,
+    "lng": 35.623979,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/bagels-truck/"
+  },
+  {
+    "id": "cart-87",
+    "name": "קפה ממרא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ממרא בבני ציון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.222373,
+    "lng": 34.87124,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mamre_cafe/"
+  },
+  {
+    "id": "cart-88",
+    "name": "ארתור קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ארתור קפה בכנרת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.7219464,
+    "lng": 35.5685045,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/arthurcafekinneret/"
+  },
+  {
+    "id": "cart-89",
+    "name": "קפה מולה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה מולה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.70605,
+    "lng": 35.616268,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-mula/"
+  },
+  {
+    "id": "cart-90",
+    "name": "שאקה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שאקה בכנרת בגינוסר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.848628,
+    "lng": 35.526631,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shakaffe/"
+  },
+  {
+    "id": "cart-91",
+    "name": "אבאלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אבאלה במושב נוב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.834128,
+    "lng": 35.787811,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/abale/"
+  },
+  {
+    "id": "cart-92",
+    "name": "קפה נווה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה נווה ברעננה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.196134,
+    "lng": 34.86109684,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-neve/"
+  },
+  {
+    "id": "cart-93",
+    "name": "רעמה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה רעמה בירושלים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.77504,
+    "lng": 35.221564,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/reama/"
+  },
+  {
+    "id": "cart-94",
+    "name": "קפה 471",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה 471 בגבעת שמואל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.069406,
+    "lng": 34.856636,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/coffee-471/"
+  },
+  {
+    "id": "cart-95",
+    "name": "קפה בארזה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בארזה בבית ילין מוצא, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.7926467,
+    "lng": 35.1640563,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/coffeeinarza/"
+  },
+  {
+    "id": "cart-96",
+    "name": "יואבה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה יואבה ברמת הגולן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.80966,
+    "lng": 35.666063,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yoava/"
+  },
+  {
+    "id": "cart-97",
+    "name": "בארקה קפה, עגלת קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בארקה קפה במעיין ברוך, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.226983,
+    "lng": 35.614487,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/baraka/"
+  },
+  {
+    "id": "cart-98",
+    "name": "קפה סושיאל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה סושיאל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.65585,
+    "lng": 34.629843,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/social-cafee/"
+  },
+  {
+    "id": "cart-99",
+    "name": "קורטאדו ניר בנים",
+    "location": "Israel",
+    "description": "קבלו את כל המידע הכי מעודכן על עגלת הקפה קורטאדו ניר בנים בניר בנים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.671041,
+    "lng": 34.755751,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cortado-cafe/"
+  },
+  {
+    "id": "cart-100",
+    "name": "קפה ממש",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ממש במושב עין ורד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.264893,
+    "lng": 34.931481,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-mamash/"
+  },
+  {
+    "id": "cart-101",
+    "name": "קפה 79",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה 79 בקיבוץ הסוללים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.750142,
+    "lng": 35.242241,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe79/"
+  },
+  {
+    "id": "cart-102",
+    "name": "אבאדמה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אבאדמה בפרדס חנה כרכור , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.460158,
+    "lng": 34.984481,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/aba-adama/"
+  },
+  {
+    "id": "cart-103",
+    "name": "נווה בר פיצה בכפר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה נווה בר פיצה בכפר בנווה מבטח, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 31.80686,
+    "lng": 34.739964,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/never-bar-pizza/"
+  },
+  {
+    "id": "cart-104",
+    "name": "עספורה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עספורה בהרדוף , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול הקרובים לעגלה",
+    "lat": 32.762018,
+    "lng": 35.176081,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/asfura/"
+  },
+  {
+    "id": "cart-105",
+    "name": "טראקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה טראקפה הנמצאת באליעד בגולן , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.806786,
+    "lng": 35.741178,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/trukcafe/"
+  },
+  {
+    "id": "cart-106",
+    "name": "קדמא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קדמא - קפה בעיירה בדרום הר חברון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 31.404658,
+    "lng": 35.104261,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/kedma-coffee/"
+  },
+  {
+    "id": "cart-107",
+    "name": "עגלאטה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלאטה בחרוצים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.226006,
+    "lng": 34.862782,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agalatte/"
+  },
+  {
+    "id": "cart-108",
+    "name": "אוליבר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אוליבר - חצור בקיבוץ חצור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.785465,
+    "lng": 34.725479,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/oliver/"
+  },
+  {
+    "id": "cart-113",
+    "name": "קפה גדליה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה גדליה בעין החורש, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.3896594,
+    "lng": 34.941761,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-gedalia/"
+  },
+  {
+    "id": "cart-114",
+    "name": "שולה קפה במדבר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שולה קפה במדבר בכפר אלדד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.655106,
+    "lng": 35.2495455,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shula-bamidbar/"
+  },
+  {
+    "id": "cart-115",
+    "name": "קפה אלישע",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה אלישע עד הלום אשדוד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.766217,
+    "lng": 34.664891,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/elisha-coffee/"
+  },
+  {
+    "id": "cart-116",
+    "name": "קפה באגמון חפר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה באגמון חפר באגמון חפר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.373683,
+    "lng": 34.938476,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cofee-agamon-hefer/"
+  },
+  {
+    "id": "cart-117",
+    "name": "אודי ויפ",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אודי ויפ בכפר רות, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.913288,
+    "lng": 35.031891,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/udi-yaf/"
+  },
+  {
+    "id": "cart-118",
+    "name": "בוגיס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בוגיס ביקום, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.248406,
+    "lng": 34.8368,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/bugis/"
+  },
+  {
+    "id": "cart-119",
+    "name": "עגלת קפה רוחמה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלת קפה רוחמה כשר גני טל , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.783864,
+    "lng": 34.795435,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ruhama/"
+  },
+  {
+    "id": "cart-120",
+    "name": "הגלידה בעמיקם",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הגלידה בעמיקם בעמיקם , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.56084,
+    "lng": 35.02036,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/affogato/"
+  },
+  {
+    "id": "cart-121",
+    "name": "קפה יאנק",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה יאנק בעין השופט, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.598927,
+    "lng": 35.098979,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yanek-yard/"
+  },
+  {
+    "id": "cart-122",
+    "name": "קפה עם חצר יין",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה עם חצר יין, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.193696,
+    "lng": 34.847324,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-am-vineyard/"
+  },
+  {
+    "id": "cart-123",
+    "name": "טראקולינרי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה טראקולינרי - פודטראק במשתלה ברמת השרון , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.12878,
+    "lng": 34.827927,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/truculinary/"
+  },
+  {
+    "id": "cart-124",
+    "name": "גודיס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גודיס, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.701498,
+    "lng": 34.71405,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/goodies/"
+  },
+  {
+    "id": "cart-125",
+    "name": "קפה יודה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה יודה בבית חורון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.873291,
+    "lng": 35.132496,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-yuda/"
+  },
+  {
+    "id": "cart-126",
+    "name": "מאיוצ&#039;קה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מאיוצ&#039;קה במושב גמזו, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.933157,
+    "lng": 34.939635,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mayuchka/"
+  },
+  {
+    "id": "cart-127",
+    "name": "קפה נומה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה נומה בכפר חיטים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.798717,
+    "lng": 35.505431,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-numa/"
+  },
+  {
+    "id": "cart-128",
+    "name": "מנותי קפה Manoti",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן על עגלת הקפה מנותי קפה Manoti במנות, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.037541,
+    "lng": 35.194638,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/manoti/"
+  },
+  {
+    "id": "cart-129",
+    "name": "חברים בצופר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה חברים בצופר בצופר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 30.556633,
+    "lng": 35.183872,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/zofar/"
+  },
+  {
+    "id": "cart-130",
+    "name": "עגלת קפה יגור, קיבוץ יגור",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת קפה יגור מקיבוץ יגור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול הקרובים לעגלה",
+    "lat": 32.749927,
+    "lng": 35.070529,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yagur/"
+  },
+  {
+    "id": "cart-131",
+    "name": "שועלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שועלה קרוב לניר יפה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.56869,
+    "lng": 35.2508631,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shooala/"
+  },
+  {
+    "id": "cart-132",
+    "name": "קפה דובי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה דובי בכפר שמואל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.88959,
+    "lng": 34.932028,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/dubee-cafe/"
+  },
+  {
+    "id": "cart-133",
+    "name": "קפה לה בוסתן",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה לה בוסתן במזור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה הבוסתן",
+    "lat": 32.052022,
+    "lng": 34.923603,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/la-bustan-cafe/"
+  },
+  {
+    "id": "cart-134",
+    "name": "קפה עמית",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה עמית במסילת ציון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.799662,
+    "lng": 35.01345,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafeamit/"
+  },
+  {
+    "id": "cart-135",
+    "name": "רודאו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה רודאו במגידו, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.576169,
+    "lng": 35.180718,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/rodeo-megido/"
+  },
+  {
+    "id": "cart-136",
+    "name": "פיק אנד גו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פיק אנד גו מושב שרונה , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול הקרובים לעגלה",
+    "lat": 32.731788,
+    "lng": 35.462742,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/pick-and-go/"
+  },
+  {
+    "id": "cart-137",
+    "name": "דמו 364 Demo",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דמו 364 Demo במודיעין, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.920443,
+    "lng": 34.965544,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/demo364/"
+  },
+  {
+    "id": "cart-138",
+    "name": "קפסיטו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפסיטו - ים המלח בים המלח, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.5711082,
+    "lng": 35.414745,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cfesito-dead-sea/"
+  },
+  {
+    "id": "cart-139",
+    "name": "קפה 65",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה 65, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.8386,
+    "lng": 35.421564,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/coffee-65/"
+  },
+  {
+    "id": "cart-140",
+    "name": "אושה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אושה בבוסתן הגליל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.947768,
+    "lng": 35.083465,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/osha/"
+  },
+  {
+    "id": "cart-142",
+    "name": "קפה סמדר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה סמדר בכרמיאל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.92227,
+    "lng": 35.286405,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-smadar/"
+  },
+  {
+    "id": "cart-143",
+    "name": "קפה קפקה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה קפקה במושב שעל בגולן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.114059,
+    "lng": 35.721853,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cupka/"
+  },
+  {
+    "id": "cart-144",
+    "name": "קפה החברים של עמית",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה החברים של עמית באור יהודה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.031004,
+    "lng": 34.855478,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/amit-friends-cafe/"
+  },
+  {
+    "id": "cart-145",
+    "name": "העגלה שבגינה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה העגלה שבגינה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.811304,
+    "lng": 34.99993,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agala-bagina/"
+  },
+  {
+    "id": "cart-146",
+    "name": "דודה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דודה קפה ברעות, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.886723,
+    "lng": 35.01779,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/doda-coffee/"
+  },
+  {
+    "id": "cart-147",
+    "name": "בלומס קפה Blooms",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בלומס קפה Blooms ,בפרדס חנה שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.47833,
+    "lng": 34.97877,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/blooms/"
+  },
+  {
+    "id": "cart-148",
+    "name": "בתקה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בתקה בשדות ים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.491301,
+    "lng": 34.889577,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/betka/"
+  },
+  {
+    "id": "cart-149",
+    "name": "דוידקה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דוידקה באיילת השחר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.021147,
+    "lng": 35.574353,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/davidka/"
+  },
+  {
+    "id": "cart-150",
+    "name": "עגלה של קפה בית הראשונים",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלה של קפה בית הראשונים,בית הראשונים שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.365959,
+    "lng": 34.872859,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agala-shel-cafe-b-r/"
+  },
+  {
+    "id": "cart-151",
+    "name": "החלוצים",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה החלוצים בראש פינה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.97025,
+    "lng": 35.53532,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hahalutzim/"
+  },
+  {
+    "id": "cart-152",
+    "name": "קפה טוב",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה טוב, בעין כרמל שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.67628,
+    "lng": 34.95796,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-tov/"
+  },
+  {
+    "id": "cart-153",
+    "name": "טראק במושבה בת שלמה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן על עגלת הקפה טראק במושבה בת שלמה בת שלמה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.596907,
+    "lng": 35.004028,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/truck-bamoshava/"
+  },
+  {
+    "id": "cart-154",
+    "name": "מי אלמה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מי אלמה - Mi Alma הנמצאת ביובלים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.880131,
+    "lng": 35.272118,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mi-alma/"
+  },
+  {
+    "id": "cart-155",
+    "name": "אלבי קנטינה גינה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אלבי קנטינה גינה בקדרים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.894798,
+    "lng": 35.478043,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/albi-cantina-garden/"
+  },
+  {
+    "id": "cart-156",
+    "name": "קפה על הקצה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה על הקצה בקריית טבעון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול הקרובים לעגלה",
+    "lat": 32.70589,
+    "lng": 35.1338084,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-al-hakatze/"
+  },
+  {
+    "id": "cart-157",
+    "name": "ברטה קפה טבעון",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ברטה קפה טבעון בטבעון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.716379,
+    "lng": 35.104134,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/berta-coffe-tivon/"
+  },
+  {
+    "id": "cart-158",
+    "name": "מלוו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מלו מלוו - mellow בכפר ויתקין, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.380092,
+    "lng": 34.881617,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mellow/"
+  },
+  {
+    "id": "cart-159",
+    "name": "עמנואלה בקיבוץ",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עמנואלה בקיבוץ, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.35099,
+    "lng": 35.018128,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/emanuela-bakibutz/"
+  },
+  {
+    "id": "cart-160",
+    "name": "רמותה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה רמותה ברמות השבים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.16533,
+    "lng": 34.88652,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ramota-cafe/"
+  },
+  {
+    "id": "cart-161",
+    "name": "ביער",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ביער ביער ראש העין, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.101171,
+    "lng": 34.969375,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/bayaar/"
+  },
+  {
+    "id": "cart-162",
+    "name": "גנה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גנה - פארק לאומי ר\"ג בפארק לאומי ר\"ג, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.052147,
+    "lng": 34.82751,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gana-park-rg/"
+  },
+  {
+    "id": "cart-163",
+    "name": "גנה אונו וואלי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גנה אונו וואלי קריית אונו, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.0546402,
+    "lng": 34.865569,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gana-uno/"
+  },
+  {
+    "id": "cart-164",
+    "name": "גנה גן אלקס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גנה גן אלקס ברמת גן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.068834,
+    "lng": 34.819519,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gana-gan-alex/"
+  },
+  {
+    "id": "cart-165",
+    "name": "גנה סקוור",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גנה סקוור בגבעתיים בכיכר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.078326,
+    "lng": 34.805969,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gana-square/"
+  },
+  {
+    "id": "cart-166",
+    "name": "גנה חרוזים",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גנה חרוזים ברמת גן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.09059,
+    "lng": 34.804075,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gana-hr/"
+  },
+  {
+    "id": "cart-167",
+    "name": "שירתה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שירתה ביער השירים בפתח תקווה , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.1084329,
+    "lng": 34.867785,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shirata-cafe/"
+  },
+  {
+    "id": "cart-168",
+    "name": "מיקא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מיקא ברמת השרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.1389236,
+    "lng": 34.82613,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mika/"
+  },
+  {
+    "id": "cart-169",
+    "name": "ואני Vany ואני פארק אריאל שרון",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ואני Vany ואני פארק אריאל שרון ברמת גן שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.042793,
+    "lng": 34.816132,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/vany-a-sh/"
+  },
+  {
+    "id": "cart-170",
+    "name": "העגלה בבוסתן החברים",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה העגלה בבוסתן החברים במושב גנות, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.021177,
+    "lng": 34.824278,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/haagala-bustanhaverim/"
+  },
+  {
+    "id": "cart-171",
+    "name": "קפה דאז",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה דאז בנימינה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.521474,
+    "lng": 34.951148,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-daaz/"
+  },
+  {
+    "id": "cart-172",
+    "name": "הנשיאה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הנשיאה ברעננה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.186227,
+    "lng": 34.862831,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hanesia/"
+  },
+  {
+    "id": "cart-173",
+    "name": "קפה ברטל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן על עגלת הקפה קפה ברטל ביהוד נווה מונוסון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.032862,
+    "lng": 34.870361,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/bartal-cafe/"
+  },
+  {
+    "id": "cart-174",
+    "name": "סוסקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה סוסקפה במושב שדי חמד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.157544,
+    "lng": 34.945484,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/suscafe/"
+  },
+  {
+    "id": "cart-175",
+    "name": "ויורו קפה Vivero Cafe",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ויורו קפה Vivero Cafe באשקלון , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 31.630406,
+    "lng": 34.566725,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/vivero-coffeetruck/"
+  },
+  {
+    "id": "cart-176",
+    "name": "אניטה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אניטה - Anita בשכניה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.848241,
+    "lng": 35.247338,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/anita/"
+  },
+  {
+    "id": "cart-177",
+    "name": "עגליו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגליו בקיבוץ הסוללים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.750853,
+    "lng": 35.239754,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agaliu/"
+  },
+  {
+    "id": "cart-178",
+    "name": "על הואדי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה על הואדי - קפה במשתלה בהושעיה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.754471,
+    "lng": 35.297506,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/al-havadi/"
+  },
+  {
+    "id": "cart-179",
+    "name": "עגלה בשדה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלה בשדה בשדה אפרים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.93978,
+    "lng": 35.092078,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/field/"
+  },
+  {
+    "id": "cart-180",
+    "name": "פסאג&#039; קפה The passage cafe",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פסאג&#039; קפה The passage cafe, דרכי הגעה, ומסלולי טיול קרובים לעגלה",
+    "lat": 32.575239,
+    "lng": 34.936686,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/the-passage-cafe/"
+  },
+  {
+    "id": "cart-181",
+    "name": "קפה בת שבע",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בת שבע ביבנה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.881659,
+    "lng": 34.726303,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-batsheva/"
+  },
+  {
+    "id": "cart-182",
+    "name": "סימני דרך",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה סימני דרך כפר סאלד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.193334,
+    "lng": 35.657498,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shimmery-derek/"
+  },
+  {
+    "id": "cart-183",
+    "name": "האיש והעגלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה האיש והעגלה בצבעון בגליל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.023816,
+    "lng": 35.416011,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/a-man-and-his-trailer/"
+  },
+  {
+    "id": "cart-184",
+    "name": "קפה ריקו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ריקו במושב כנף בגולן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.868133,
+    "lng": 35.703593,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-rico/"
+  },
+  {
+    "id": "cart-185",
+    "name": "מקינטה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מקינטה בעין צורים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.701189,
+    "lng": 34.714181,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/macchinetta/"
+  },
+  {
+    "id": "cart-186",
+    "name": "קפה מודע",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה מודע, בעין מודע, עמק המעיינות שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.478929,
+    "lng": 35.456156,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/moda-coffee/"
+  },
+  {
+    "id": "cart-187",
+    "name": "ריטריט קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ריטריט קפה בראש פינה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.970806,
+    "lng": 35.536389,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/retreat-cafe/"
+  },
+  {
+    "id": "cart-188",
+    "name": "משק סגל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה משק סגל בטל שחר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.803085,
+    "lng": 34.905508,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mesheksegal/"
+  },
+  {
+    "id": "cart-189",
+    "name": "אינדיגו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אינדיגו בכפר ורבורג, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.718023,
+    "lng": 34.72965,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/indigo/"
+  },
+  {
+    "id": "cart-190",
+    "name": "בנחל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בנחל באשדוד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.816771,
+    "lng": 34.649355,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/banahal/"
+  },
+  {
+    "id": "cart-191",
+    "name": "גיטה Gita",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גיטה Gita במצפה אורית באלון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 31.834838,
+    "lng": 35.351021,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gita/"
+  },
+  {
+    "id": "cart-192",
+    "name": "טווגו Twago",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה טווגו Twago בכפר סבא, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.194829,
+    "lng": 34.8929569,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/twago/"
+  },
+  {
+    "id": "cart-193",
+    "name": "עגלת קפה באגם",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלת קפה באגם - Lake side בראשון לציון , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 31.977658,
+    "lng": 34.752433,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/lake-side/"
+  },
+  {
+    "id": "cart-194",
+    "name": "קפה בכפר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בכפר במושב משמר השבעה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.00984,
+    "lng": 34.82361,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/coffee-bacfar/"
+  },
+  {
+    "id": "cart-195",
+    "name": "נינו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה נינו הנמצאת במעלה גמלא, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.89006,
+    "lng": 35.683326,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/nino/"
+  },
+  {
+    "id": "cart-196",
+    "name": "אתנחתא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אתנחתא מקריית טבעון , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול הקרובים לעגלה",
+    "lat": 32.691931,
+    "lng": 35.10797,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/atnachta/"
+  },
+  {
+    "id": "cart-197",
+    "name": "גאליתה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גאליתה בשובה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.449416,
+    "lng": 34.547389,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/galita/"
+  },
+  {
+    "id": "cart-198",
+    "name": "בום בר קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בום בר קפה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.621385,
+    "lng": 34.577847,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/boombar-coffee/"
+  },
+  {
+    "id": "cart-199",
+    "name": "גאולה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גאולה בתקומה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.447843,
+    "lng": 34.575964,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/geula/"
+  },
+  {
+    "id": "cart-200",
+    "name": "הגילברט׳ס The Gilberts",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הגילברט׳ס The Gilberts ברמת השופט , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.611434,
+    "lng": 35.095289,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/the-gilberts/"
+  },
+  {
+    "id": "cart-201",
+    "name": "קפה פלורה בפטל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה פלורה בפטל בנתיב העשרה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.580393,
+    "lng": 34.540093,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-flora-bapetel/"
+  },
+  {
+    "id": "cart-202",
+    "name": "קפה לאגו ראש העין",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה לאגו ראש העין - LAGO בראש העין, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.106032,
+    "lng": 34.943673,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/caffe-lago-rosh-haayin/"
+  },
+  {
+    "id": "cart-203",
+    "name": "קפה לאגו פתח תקווה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה לאגו פתח תקווה - LAGO בפתח תקווה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.093673,
+    "lng": 34.868034,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/caffe-lago/"
+  },
+  {
+    "id": "cart-204",
+    "name": "קפה לייבו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה לייבו ברמת הגולן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.132255,
+    "lng": 35.69164,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-leibo/"
+  },
+  {
+    "id": "cart-205",
+    "name": "קפה ליברל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ליברל בכפר נטר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.273634,
+    "lng": 34.874033,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-liberal/"
+  },
+  {
+    "id": "cart-206",
+    "name": "מלודי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מלודי בשוהם, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.986587,
+    "lng": 34.944699,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/melody/"
+  },
+  {
+    "id": "cart-207",
+    "name": "ביסלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ביסלה בגליל ים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.158643,
+    "lng": 34.833195,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/bisalle/"
+  },
+  {
+    "id": "cart-209",
+    "name": "קרני חיטין",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קרני חיטין בכנרת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.719066,
+    "lng": 35.558774,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/karney-hitin/"
+  },
+  {
+    "id": "cart-210",
+    "name": "אוליבר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אוליבר - בניה במושב בניה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.843421,
+    "lng": 34.751923,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/oliver-coffee-bnaya/"
+  },
+  {
+    "id": "cart-211",
+    "name": "קפניו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפניו בבית הילל, הגושרים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 33.217571,
+    "lng": 35.608299,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/kaphnnyo/"
+  },
+  {
+    "id": "cart-212",
+    "name": "גליקי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גליקי בקיבוץ יפתח, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.131599,
+    "lng": 35.553353,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/galiki/"
+  },
+  {
+    "id": "cart-213",
+    "name": "Lake Cafe",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה Lake Cafe בשוהם, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.9870236,
+    "lng": 34.943555,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/lake-cafe/"
+  },
+  {
+    "id": "cart-214",
+    "name": "יולה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה יולה קפה ברבדים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.772826,
+    "lng": 34.812777,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yula-coffee/"
+  },
+  {
+    "id": "cart-215",
+    "name": "רוגעל׳ה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה רוגעל׳ה בארסוף קדם, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.2067,
+    "lng": 34.818442,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/rogale-cafe/"
+  },
+  {
+    "id": "cart-216",
+    "name": "ג’ילברטה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ג’ילברטה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.653089,
+    "lng": 34.7057246,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gilberta-coffee/"
+  },
+  {
+    "id": "cart-217",
+    "name": "בוטקה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה בוטקה במודיעין, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.888365,
+    "lng": 34.96865,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/butke/"
+  },
+  {
+    "id": "cart-218",
+    "name": "קפאלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפאלה בקיבוץ כרמים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.331215,
+    "lng": 34.917679,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/caffella/"
+  },
+  {
+    "id": "cart-219",
+    "name": "קפה אמיצ׳י",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה אמיצ׳י בכרכום, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.924716,
+    "lng": 35.60744,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/amici-coffee/"
+  },
+  {
+    "id": "cart-220",
+    "name": "השריף",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה השריף בפרדס חנה כרכור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.480743,
+    "lng": 34.959545,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/sheriff/"
+  },
+  {
+    "id": "cart-221",
+    "name": "אור ביער",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אור ביער, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.580265,
+    "lng": 34.571164,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/or-bayaar/"
+  },
+  {
+    "id": "cart-222",
+    "name": "אוליבס אגם ניצנים Olives",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אוליבס אגם ניצנים Olives אגם ניצנים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ועוד",
+    "lat": 31.740404,
+    "lng": 34.608032,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/olives/"
+  },
+  {
+    "id": "cart-223",
+    "name": "הקפה של הטבע",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הקפה של הטבע בלהבים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.371023,
+    "lng": 34.826111,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/natures-coffee/"
+  },
+  {
+    "id": "cart-224",
+    "name": "טראק במושבה מקורה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה טראק במושבה מקורה כרם מהרל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.639244,
+    "lng": 34.991648,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/truck-bamoshava-makura/"
+  },
+  {
+    "id": "cart-225",
+    "name": "קפה מאנז&#039;",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה מאנז&#039; במושב הבונים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.639634,
+    "lng": 34.93599,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-manege/"
+  },
+  {
+    "id": "cart-226",
+    "name": "עגלגלה נוף הגבעה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלגלה נוף הגבעה בזכרון יעקב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.575172,
+    "lng": 34.960269,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agalgala-nof-hagiva/"
+  },
+  {
+    "id": "cart-227",
+    "name": "לילו קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה לילו קפה במושב בית הלוי, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.3531631,
+    "lng": 34.92996,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/lilu-cafe/"
+  },
+  {
+    "id": "cart-228",
+    "name": "קפה בבקי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בבקי בת חן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.361667,
+    "lng": 34.873245,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-bebeki/"
+  },
+  {
+    "id": "cart-229",
+    "name": "אסתריקה truck על הירקון",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אסתריקה truck על הירקון בדרום השרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.13177,
+    "lng": 34.910295,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/esterika/"
+  },
+  {
+    "id": "cart-230",
+    "name": "קפה פלורה בחווה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה פלורה בחווה בשדה משה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.608856,
+    "lng": 34.802555,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-flora-farm/"
+  },
+  {
+    "id": "cart-231",
+    "name": "אוליבס באר יעקב Olives",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אוליבס באר יעקב Olives באר יעקב , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולים",
+    "lat": 31.945476,
+    "lng": 34.842904,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/olives-b-y/"
+  },
+  {
+    "id": "cart-232",
+    "name": "אוליבס מזכרת בתיה Olives",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אוליבס מזכרת בתיה Olives במזכרת בתיה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 31.848004,
+    "lng": 34.840381,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/olives-m-b/"
+  },
+  {
+    "id": "cart-233",
+    "name": "קפה ברנצ&#039;ו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ברנצ&#039;ו במושב ציפורי, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.749279,
+    "lng": 35.281486,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-ba-rancho/"
+  },
+  {
+    "id": "cart-234",
+    "name": "פקל קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פק\"ל קפה במשמר דוד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.81624,
+    "lng": 34.89699,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/pakal-caffe/"
+  },
+  {
+    "id": "cart-235",
+    "name": "רוזה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה רוזה קפה - Rose cafe ערוגות, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 31.741715,
+    "lng": 34.767657,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/rose-cafe/"
+  },
+  {
+    "id": "cart-236",
+    "name": "טל פיקניקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה טל פיקניקפה בביצרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.794586,
+    "lng": 34.741922,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/tal-picniccafe/"
+  },
+  {
+    "id": "cart-237",
+    "name": "אינתה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אינתה משאבי שדה בדרך לאילת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.007383,
+    "lng": 34.786631,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/inta/"
+  },
+  {
+    "id": "cart-238",
+    "name": "קפה בחווה Mamas",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בחווה Mamas, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.59275,
+    "lng": 35.081215,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mamas/"
+  },
+  {
+    "id": "cart-239",
+    "name": "סטלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה סטלה במושב מגשימים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.048017,
+    "lng": 34.897733,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/stella/"
+  },
+  {
+    "id": "cart-240",
+    "name": "מונה קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מונה קפה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.89019,
+    "lng": 34.919869,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mona-cafe/"
+  },
+  {
+    "id": "cart-241",
+    "name": "קפה לוצ&#039;ה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה לוצ&#039;ה בגדרה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.81231,
+    "lng": 34.771772,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/lucche-coffee/"
+  },
+  {
+    "id": "cart-242",
+    "name": "קפה בוסקו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בוסקו במושב סתריה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.890182,
+    "lng": 34.8440161,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/caffe-bosco/"
+  },
+  {
+    "id": "cart-243",
+    "name": "קפאין קפה במדבר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפאין במושב פארן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 30.362962,
+    "lng": 35.154093,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/caffe-inn/"
+  },
+  {
+    "id": "cart-244",
+    "name": "פתפותים",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פתפותים עמיעד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.92656,
+    "lng": 35.543333,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/pitputim-bakery/"
+  },
+  {
+    "id": "cart-245",
+    "name": "עגלתא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלתא בני דרור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.26053,
+    "lng": 34.903111,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agalata/"
+  },
+  {
+    "id": "cart-246",
+    "name": "קפה קירשנר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה קירשנר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.73743,
+    "lng": 35.192829,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/kirshner-cafe/"
+  },
+  {
+    "id": "cart-247",
+    "name": "ברי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ברי בביכורה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.447155,
+    "lng": 35.487063,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/bari/"
+  },
+  {
+    "id": "cart-248",
+    "name": "צוקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה צוקפה בבית ירח, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.71606,
+    "lng": 35.573304,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/tzukcafe/"
+  },
+  {
+    "id": "cart-249",
+    "name": "סיפתח אפרת",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה סיפתח אפרת אפרת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.682119,
+    "lng": 35.169541,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/siftach-efrat/"
+  },
+  {
+    "id": "cart-250",
+    "name": "סיפתח סן סימון",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה סיפתח סן סימון בירושלים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.760209,
+    "lng": 35.206354,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/jerusalem/"
+  },
+  {
+    "id": "cart-251",
+    "name": "גנה אונו נאות אריאל שרון",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גנה אונו נאות אריאל שרון בקריית אונו, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 32.062389,
+    "lng": 34.84087,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gana-uno-ariel/"
+  },
+  {
+    "id": "cart-252",
+    "name": "קפה יער",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה יער בבית לחם הגלילית, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.731546,
+    "lng": 35.185492,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yaar-coffee/"
+  },
+  {
+    "id": "cart-253",
+    "name": "קפה ארטורה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ארטורה במכללת רופין, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.34113,
+    "lng": 34.91413,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-artura/"
+  },
+  {
+    "id": "cart-254",
+    "name": "נינה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה נינה - Nina במושב חגור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.139383,
+    "lng": 34.94886,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/nina/"
+  },
+  {
+    "id": "cart-255",
+    "name": "Vany ואני גן רבקה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה Vany ואני גן רבקה בגבעתיים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.063608,
+    "lng": 34.812539,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/vany/"
+  },
+  {
+    "id": "cart-256",
+    "name": "Vany ואני פארק קונביץ",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה Vany ואני פארק קונביץ ברמת גן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.05705,
+    "lng": 34.844936,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/vany-kn/"
+  },
+  {
+    "id": "cart-257",
+    "name": "דוסה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דוסה - Dusa מעלה גלבוע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.476627,
+    "lng": 35.41984,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/dusa/"
+  },
+  {
+    "id": "cart-258",
+    "name": "אינגלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אינגלה בנחלים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.0588973,
+    "lng": 34.912546,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ingale/"
+  },
+  {
+    "id": "cart-259",
+    "name": "אביולה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אביולה בצופים בשומרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.196357,
+    "lng": 35.003107,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/aviyula/"
+  },
+  {
+    "id": "cart-260",
+    "name": "על המזח",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה על המזח בטיילת בת ים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.01558,
+    "lng": 34.738249,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/al-hamezah/"
+  },
+  {
+    "id": "cart-261",
+    "name": "ירקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ירקפה בירקונים פתח תקווה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.117703,
+    "lng": 34.902461,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yarcaffe/"
+  },
+  {
+    "id": "cart-262",
+    "name": "העגלה של מריאן",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה העגלה של מריאן בגן יאשיה , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.3489,
+    "lng": 34.994933,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mariannes-cafe/"
+  },
+  {
+    "id": "cart-263",
+    "name": "עגלושקי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלושקי בבת גלבוע , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.556605,
+    "lng": 35.367728,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agalushki/"
+  },
+  {
+    "id": "cart-264",
+    "name": "גולי קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גולי קפה בעין דור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.657049,
+    "lng": 35.417114,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/guli-caffee/"
+  },
+  {
+    "id": "cart-265",
+    "name": "משק אופיר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה משק אופיר באלון הגליל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.763293,
+    "lng": 35.222482,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/meshek-ofir/"
+  },
+  {
+    "id": "cart-266",
+    "name": "ברלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ברלה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.200726,
+    "lng": 34.924324,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/berale/"
+  },
+  {
+    "id": "cart-267",
+    "name": "קפה קטן",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה קטן ביער ניר משה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.481352,
+    "lng": 34.635571,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-katan/"
+  },
+  {
+    "id": "cart-268",
+    "name": "קפה נחשון",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה נחשון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.832907,
+    "lng": 34.95414,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/nachshon-coffee/"
+  },
+  {
+    "id": "cart-269",
+    "name": "נלי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה נלי במשמר איילון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.870883,
+    "lng": 34.948381,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/nelly/"
+  },
+  {
+    "id": "cart-270",
+    "name": "הפוכות",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הפוכות כשרה במושב חיבת ציון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.399613,
+    "lng": 34.914053,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hafuchot/"
+  },
+  {
+    "id": "cart-271",
+    "name": "חנושה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה חנושה, במושב סגולה שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 31.670895,
+    "lng": 34.780865,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/chenushas-coffee-truck/"
+  },
+  {
+    "id": "cart-272",
+    "name": "olivan",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אוליבאן Olivan בכפר אחים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.748613,
+    "lng": 34.752431,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/olivan/"
+  },
+  {
+    "id": "cart-273",
+    "name": "קפה נוגה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה נוגה בנורדיה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.318571,
+    "lng": 34.898108,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/noga-cafe/"
+  },
+  {
+    "id": "cart-274",
+    "name": "שולקה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שולקה חופית, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.384005,
+    "lng": 34.870726,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shulke/"
+  },
+  {
+    "id": "cart-275",
+    "name": "אלה קפה בעמק",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אלה קפה בעמק בעמק באלה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.610657,
+    "lng": 34.896252,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ella-coffee-valley/"
+  },
+  {
+    "id": "cart-276",
+    "name": "עגלת חד נס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלת חד נס בחד נס, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.928628,
+    "lng": 35.642287,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/had-ness/"
+  },
+  {
+    "id": "cart-277",
+    "name": "פארם קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פארם קפה - כפר אוריה - Farm Cafe, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 31.792996,
+    "lng": 34.947875,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/farm-caffe/"
+  },
+  {
+    "id": "cart-278",
+    "name": "סיפור אחר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה סיפור אחר בגבעות בר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.354187,
+    "lng": 34.76115,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/sipur-acher/"
+  },
+  {
+    "id": "cart-279",
+    "name": "עגלול",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עגלול - משק לוי בבית גמליאל קרוב ליבנה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 31.86578,
+    "lng": 34.756773,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/agalol/"
+  },
+  {
+    "id": "cart-280",
+    "name": "איריסקו קפה באהבה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן על עגלת הקפה איריסקו קפה באהבה בתל עדשים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.647349,
+    "lng": 35.298354,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/irisku-coffee/"
+  },
+  {
+    "id": "cart-281",
+    "name": "פלחה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פלחה בקיבוץ להב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.38025,
+    "lng": 34.87353,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/falha/"
+  },
+  {
+    "id": "cart-282",
+    "name": "קפה בפטל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בפטל ביתן אהרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.366474,
+    "lng": 34.874189,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/katifbaemek/"
+  },
+  {
+    "id": "cart-283",
+    "name": "קפה כוכן",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה כוכן בכורזים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.90944,
+    "lng": 35.553315,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-cocen/"
+  },
+  {
+    "id": "cart-284",
+    "name": "אשרק&#039;ה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אשרק&#039;ה קרוב לנחל אלכסנדר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.36602,
+    "lng": 34.908341,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/asherke/"
+  },
+  {
+    "id": "cart-285",
+    "name": "אבו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אבו - Avo מושב בצת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.074066,
+    "lng": 35.13166,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/avo/"
+  },
+  {
+    "id": "cart-286",
+    "name": "העגלה הסגלגלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה העגלה הסגלגלה בשדה יצחק, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.404147,
+    "lng": 34.993387,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hasgalgala/"
+  },
+  {
+    "id": "cart-287",
+    "name": "קפה הגבעה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה הגבעה בנצר סירני, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.926334,
+    "lng": 34.828484,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-hagiva/"
+  },
+  {
+    "id": "cart-288",
+    "name": "חלהוולאוו",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה חלהוולאוו במושב אודם, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.193512,
+    "lng": 35.750111,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/challawlaw/"
+  },
+  {
+    "id": "cart-289",
+    "name": "ביס בהר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ביס בהר בהר אדר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.826134,
+    "lng": 35.1314111,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/bis-bahar/"
+  },
+  {
+    "id": "cart-290",
+    "name": "אצל שמוליק",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אצל שמוליק בחוות השלום, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.628208,
+    "lng": 35.103759,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/etzelshmulik/"
+  },
+  {
+    "id": "cart-291",
+    "name": "לאה&#039;לה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה לאה&#039;לה בכפר פינס, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.483804,
+    "lng": 35.002463,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/leahlecafe/"
+  },
+  {
+    "id": "cart-292",
+    "name": "קפה בסיבוב",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה בסיבוב בקיבוץ רוחמה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.494579,
+    "lng": 34.700841,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-basivuv/"
+  },
+  {
+    "id": "cart-293",
+    "name": "ליצי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ליצי במושב באר טוביה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.736982,
+    "lng": 34.723762,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/lychee/"
+  },
+  {
+    "id": "cart-294",
+    "name": "ברברה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ברברה,במושב ברכיה שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.667996,
+    "lng": 34.616947,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/barbara/"
+  },
+  {
+    "id": "cart-295",
+    "name": "שישו קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שישו קפה במושב הזורעים קרוב לכנרת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 32.750237,
+    "lng": 35.498988,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shisho-caffe/"
+  },
+  {
+    "id": "cart-296",
+    "name": "הקטפת קפה במשק",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הקטפת קפה במשק בית שערים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.69174,
+    "lng": 35.17548,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hakatefet/"
+  },
+  {
+    "id": "cart-297",
+    "name": "אתנחתא בקיבוץ",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אתנחתא בקיבוץ בקיבוץ גברעם, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.591766,
+    "lng": 34.612877,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/atnahta-bakibutz/"
+  },
+  {
+    "id": "cart-298",
+    "name": "קפה פונטיין Cafe Fontaine",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה פונטיין Cafe Fontaine בנס ציונה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 31.94011,
+    "lng": 34.793508,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-fontaine/"
+  },
+  {
+    "id": "cart-299",
+    "name": "נבו קפה ביקב",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה נבו קפה ביקב במושב מטע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.714601,
+    "lng": 35.063725,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/nevo_winery/"
+  },
+  {
+    "id": "cart-300",
+    "name": "ואני רעננה Vany",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה ואני רעננה Vany ברעננה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.189062,
+    "lng": 34.876506,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/vany-raanana/"
+  },
+  {
+    "id": "cart-301",
+    "name": "כרמלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה כרמלה בגבעת אלה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.722843,
+    "lng": 35.243003,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/carmela/"
+  },
+  {
+    "id": "cart-302",
+    "name": "קטרינה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קטרינה במושב כפר דניאל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.943968,
+    "lng": 34.933067,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/katerina/"
+  },
+  {
+    "id": "cart-303",
+    "name": "אלקע בר",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אלקע בר מושב עין זיוון , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 33.097136,
+    "lng": 35.798364,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/elka-bar/"
+  },
+  {
+    "id": "cart-304",
+    "name": "גארדן קופי",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גארדן קופי - Garden Coffee בשתולים , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול",
+    "lat": 31.777565,
+    "lng": 34.67851834,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/garden-cy/"
+  },
+  {
+    "id": "cart-305",
+    "name": "גרייפו Grypo",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גרייפו Grypo ביבנה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.858313,
+    "lng": 34.729564,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/grypo/"
+  },
+  {
+    "id": "cart-306",
+    "name": "רוזל&#039;ה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה רוזל&#039;ה בכפר הרי\"ף, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.746132,
+    "lng": 34.790375,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/rozale/"
+  },
+  {
+    "id": "cart-307",
+    "name": "פזיקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פזיקפה במושב ינוב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.305105,
+    "lng": 34.95075,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/pazi/"
+  },
+  {
+    "id": "cart-308",
+    "name": "סוזנה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה סוזנה בפרדס חנה כרכור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.476661,
+    "lng": 34.971362,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/suzana/"
+  },
+  {
+    "id": "cart-309",
+    "name": "עמנואל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה עמנואל במושב ישע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.247568,
+    "lng": 34.406876,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/emanuel/"
+  },
+  {
+    "id": "cart-310",
+    "name": "הקרון בכפר יהושוע",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הקרון בכפר יהושוע בכפר יהושוע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.691855,
+    "lng": 35.15466,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hakaron-eyal-gimshi-kfar-yehoshua/"
+  },
+  {
+    "id": "cart-311",
+    "name": "הקרון בעמק",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הקרון בעמק - אייל גימשי מקיבוץ רמת דוד, שעות פעילות, דרכי הגעה, טלפון ומסלולי טיול",
+    "lat": 32.676376,
+    "lng": 35.202928,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hakaron-baaemek/"
+  },
+  {
+    "id": "cart-312",
+    "name": "המלך בשדה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה המלך בשדה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.700419,
+    "lng": 35.144328,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hamelech_basadeh/"
+  },
+  {
+    "id": "cart-313",
+    "name": "השמורה 215",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה השמורה 215 בשמורת פורה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.4934,
+    "lng": 34.77873,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shmura215/"
+  },
+  {
+    "id": "cart-314",
+    "name": "דידי קפה DiDi Cafe",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דידי קפה מהישוב קדרון , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.81902,
+    "lng": 34.79629,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/didi-cafe/"
+  },
+  {
+    "id": "cart-315",
+    "name": "אצל דנדן",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אצל דנדן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.507902,
+    "lng": 34.601365,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/etzel-dandan/"
+  },
+  {
+    "id": "cart-316",
+    "name": "לכישה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה לכישה בכרמי קטיף בלכיש, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.538364,
+    "lng": 34.908714,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/lachisha/"
+  },
+  {
+    "id": "cart-317",
+    "name": "גודריץ׳",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גודריץ׳ GOODRICH, בכפר מרדכי שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 31.830547,
+    "lng": 34.754198,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/goodrich/"
+  },
+  {
+    "id": "cart-318",
+    "name": "הקפה ליד הנחל",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הקפה ליד הנחל כשרה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.701206,
+    "lng": 34.714159,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hkafelyadhnahal/"
+  },
+  {
+    "id": "cart-319",
+    "name": "לה קולינה La Colina",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה לה קולינה La Colina בגבעת ברנר, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים",
+    "lat": 31.869471,
+    "lng": 34.805009,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/la-colina/"
+  },
+  {
+    "id": "cart-320",
+    "name": "פרנצ&#039;י",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פרנצ&#039;י - Frenchie באזור, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.025726,
+    "lng": 34.804237,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/frenchie/"
+  },
+  {
+    "id": "cart-321",
+    "name": "הישראליות",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הישראליות בקיבוץ דברת, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.644994,
+    "lng": 35.351837,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/haisraeliyot/"
+  },
+  {
+    "id": "cart-322",
+    "name": "הפודטראק של פסטטריה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה הפודטראק של פסטטריה בירושלים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.774949,
+    "lng": 35.204184,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/pastatria/"
+  },
+  {
+    "id": "cart-323",
+    "name": "מוישה קפה בשדה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מוישה קפה בשדה בקיבוץ לביא , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.788074,
+    "lng": 35.438998,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/moishe/"
+  },
+  {
+    "id": "cart-324",
+    "name": "קפה דורה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה דורה בקיבוץ מזרע, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.651993,
+    "lng": 35.288387,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/dora-coffee-truck/"
+  },
+  {
+    "id": "cart-325",
+    "name": "מאלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מאלה באמפי פארק גולן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.770011,
+    "lng": 35.693171,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/malla/"
+  },
+  {
+    "id": "cart-326",
+    "name": "פודטראק המאפיה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פודטראק המאפיה בגדרה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.800892,
+    "lng": 34.776127,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/food-truck-hamaafiya/"
+  },
+  {
+    "id": "cart-327",
+    "name": "פליאו Fliou",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פליאו Fliou בקיבוץ נגבה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.663024,
+    "lng": 34.684172,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/fliou/"
+  },
+  {
+    "id": "cart-328",
+    "name": "דה קאסה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה דה קאסה במודיעין , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.881346,
+    "lng": 35.0143606,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/de-casa/"
+  },
+  {
+    "id": "cart-329",
+    "name": "המנחמת",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה המנחמת בכפר מנחם, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.731268,
+    "lng": 34.831921,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/hamenahemet/"
+  },
+  {
+    "id": "cart-330",
+    "name": "לוקה Luka",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה לוקה Luka חגלה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.389953,
+    "lng": 34.92544,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/luka/"
+  },
+  {
+    "id": "cart-331",
+    "name": "יאמי פוד טראק",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה יאמי פוד טראק באשדוד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.793468,
+    "lng": 34.629314,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/yummy-food-truck/"
+  },
+  {
+    "id": "cart-332",
+    "name": "זלדה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה זלדה בישוב נווה ירק, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.131908,
+    "lng": 34.922977,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/zelda/"
+  },
+  {
+    "id": "cart-333",
+    "name": "מורקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מורקפה בקיבוץ עלומים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.451749,
+    "lng": 34.515445,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/morcafe/"
+  },
+  {
+    "id": "cart-334",
+    "name": "קפיש קפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפיש קפה שערי תקווה בשומרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.118855,
+    "lng": 35.030041,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/capische-caffe/"
+  },
+  {
+    "id": "cart-335",
+    "name": "מאנדרא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה מאנדרא בישוב לשם בעלי זהב, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.066367,
+    "lng": 35.044434,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/mandra/"
+  },
+  {
+    "id": "cart-336",
+    "name": "האוטובוס",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה האוטובוס מאורנית, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.120697,
+    "lng": 34.994609,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/the-bus/"
+  },
+  {
+    "id": "cart-337",
+    "name": "פלורין",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה פלורין בישוב פדואל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.059332,
+    "lng": 35.046572,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/florin/"
+  },
+  {
+    "id": "cart-338",
+    "name": "קופיקנה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קופיקנה כשר בפארק קנה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.149441,
+    "lng": 35.108626,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/coffeeqana/"
+  },
+  {
+    "id": "cart-339",
+    "name": "קפה במצפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה במצפה באבני חפץ , שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.284977,
+    "lng": 35.082929,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-bamitspe/"
+  },
+  {
+    "id": "cart-340",
+    "name": "טאבום Ta",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה טאבום Ta-boom קדומים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.209507,
+    "lng": 35.16092,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ta-boom/"
+  },
+  {
+    "id": "cart-341",
+    "name": "חויא",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה חויא, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.269914,
+    "lng": 35.076535,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/havaia/"
+  },
+  {
+    "id": "cart-342",
+    "name": "גיתיתה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה גיתיתה - שפת המדבר בגיתית, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.10027,
+    "lng": 35.401661,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/gitita/"
+  },
+  {
+    "id": "cart-343",
+    "name": "אריאלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה אריאלה בישוב אריאל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.105361,
+    "lng": 35.191708,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/ariela/"
+  },
+  {
+    "id": "cart-344",
+    "name": "א",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה א-קפלה מושב ביצרון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.792742,
+    "lng": 34.730293,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/acafella/"
+  },
+  {
+    "id": "cart-345",
+    "name": "שלוש בקפה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה שלוש בקפה בישוב לפיד, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.915689,
+    "lng": 35.029419,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/shalosh-bacafe/"
+  },
+  {
+    "id": "cart-346",
+    "name": "החצר של נוני",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה החצר של נוני בבית נחמיה, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.982133,
+    "lng": 34.954216,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/nuni-bhtzar/"
+  },
+  {
+    "id": "cart-347",
+    "name": "קרמלה",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קרמלה באבן שמואל, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.573012,
+    "lng": 34.769347,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/karamela/"
+  },
+  {
+    "id": "cart-348",
+    "name": "קפה ג&#039;וני",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה ג&#039;וני במחולה בקעת הירדן, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.3654755,
+    "lng": 35.515683,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/coffeejoni/"
+  },
+  {
+    "id": "cart-349",
+    "name": "קפה וים שפיים",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה קפה וים שפיים בשפיים, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 32.216612,
+    "lng": 34.820799,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/cafe-ve-yam/"
+  },
+  {
+    "id": "cart-350",
+    "name": "האלון",
+    "location": "Israel",
+    "description": "בואו לקבל את כל המידע הכי מעודכן אודות עגלת הקפה האלון בגוש עציון, שעות פעילות, דרכי הגעה, טלפון, תפריטים ומסלולי טיול קרובים לעגלה",
+    "lat": 31.656917,
+    "lng": 35.121385,
+    "icon": "☕",
+    "sourceUrl": "https://coffeetrail.co.il/coffeecart/haalon/"
+  }
 ]
