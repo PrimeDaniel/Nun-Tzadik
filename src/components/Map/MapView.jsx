@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, useMapEvents, Marker, useMap } from 'react-leaflet'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Plus, LocateFixed, Loader2, Layers } from 'lucide-react'
+import { Plus, LocateFixed, Loader2, Layers, Coffee } from 'lucide-react'
 import L from 'leaflet'
 import IsraelProvinces from './IsraelProvinces'
 import CityMarkers from './CityMarkers'
@@ -9,6 +9,8 @@ import PinMarker from './PinMarker'
 import PinPopup from './PinPopup'
 import AddPinModal from './AddPinModal'
 import AddGroupModal from './AddGroupModal'
+import CoffeeCartMarker from './CoffeeCartMarker'
+import coffeeCartsData from '../../data/coffeeCarts.json'
 import { useAuth } from '../../hooks/useAuth'
 
 // Handles map click for placing pins, with support for touch-and-hold precise dragging
@@ -146,6 +148,7 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
   const [userLocation, setUserLocation] = useState(null)
   const [locating, setLocating] = useState(false)
   const [groupModalOpen, setGroupModalOpen] = useState(false)
+  const [showCoffeeCarts, setShowCoffeeCarts] = useState(false)
 
   const handleMapClick = useCallback((latlng) => {
     if (readOnly || !isAdding) return
@@ -217,12 +220,30 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
           <PinMarker key={pin.id} pin={pin} onClick={handlePinClick} />
         ))}
 
+        {showCoffeeCarts && coffeeCartsData.map((cart) => (
+          <CoffeeCartMarker key={cart.id} cart={cart} />
+        ))}
+
         <UserLocationMarker location={userLocation} />
         <FlyToPin key={externalPin?.id + '_' + externalPin?.lat} pin={externalPin} onReady={(pin) => { setSelectedPin(pin); setPendingLatlng(null) }} />
       </MapContainer>
 
       {/* Bottom-right controls */}
       <div className="absolute bottom-8 right-4 z-[500] flex flex-col gap-2 items-end">
+        {/* Toggle coffee carts */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setShowCoffeeCarts(!showCoffeeCarts)}
+          title="Toggle Coffee Carts"
+          className={`flex items-center justify-center w-11 h-11 rounded-xl shadow-ntz-card border transition-colors ${showCoffeeCarts
+              ? 'bg-[#FF8C42] border-[#FF8C42] text-white'
+              : 'bg-white border-[#FF8C42]/40 text-[#FF8C42] hover:border-[#FF8C42]'
+            }`}
+        >
+          <Coffee className="w-5 h-5" />
+        </motion.button>
+
         {/* Find my location */}
         <motion.button
           whileHover={{ scale: 1.05 }}
