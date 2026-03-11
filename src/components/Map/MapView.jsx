@@ -147,7 +147,7 @@ function createCustomClusterIcon(cluster) {
     html: `
       <div class="cluster-marker-container">
         <div class="cluster-count-badge">${count}</div>
-        <div class="cluster-icon-base">📍</div>
+        <div class="cluster-icon-base">☕</div>
       </div>
     `,
     className: 'custom-cluster-icon',
@@ -233,15 +233,15 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
 
         <MapAddPinInteraction isAdding={isAdding} onPinPlaced={handleMapClick} />
 
+        {pins.map((pin) => (
+          <PinMarker key={pin.id} pin={pin} onClick={handlePinClick} />
+        ))}
+
         <MarkerClusterGroup
           chunkedLoading
           maxClusterRadius={60}
           iconCreateFunction={createCustomClusterIcon}
         >
-          {pins.map((pin) => (
-            <PinMarker key={pin.id} pin={pin} onClick={handlePinClick} />
-          ))}
-
           {showCoffeeCarts && coffeeCartsData.map((cart) => (
             <CoffeeCartMarker key={cart.id} cart={cart} />
           ))}
