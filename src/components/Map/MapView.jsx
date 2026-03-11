@@ -12,6 +12,7 @@ import AddGroupModal from './AddGroupModal'
 import CoffeeCartMarker from './CoffeeCartMarker'
 import coffeeCartsData from '../../data/coffeeCarts.json'
 import { useAuth } from '../../hooks/useAuth'
+import MarkerClusterGroup from 'react-leaflet-cluster'
 
 // Handles map click for placing pins, with support for touch-and-hold precise dragging
 function MapAddPinInteraction({ isAdding, onPinPlaced }) {
@@ -139,6 +140,22 @@ function FlyToPin({ pin, onReady }) {
   return null
 }
 
+// Custom cluster icon logic
+function createCustomClusterIcon(cluster) {
+  const count = cluster.getChildCount()
+  return L.divIcon({
+    html: `
+      <div class="cluster-marker-container">
+        <div class="cluster-count-badge">${count}</div>
+        <div class="cluster-icon-base">📍</div>
+      </div>
+    `,
+    className: 'custom-cluster-icon',
+    iconSize: [44, 48],
+    iconAnchor: [22, 48],
+  })
+}
+
 export default function MapView({ pins, isOwner = true, readOnly = false, externalPin, viewerUser }) {
   const { user } = useAuth()
   const [isAdding, setIsAdding] = useState(false)
@@ -216,13 +233,19 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
 
         <MapAddPinInteraction isAdding={isAdding} onPinPlaced={handleMapClick} />
 
-        {pins.map((pin) => (
-          <PinMarker key={pin.id} pin={pin} onClick={handlePinClick} />
-        ))}
+        <MarkerClusterGroup
+          chunkedLoading
+          maxClusterRadius={60}
+          iconCreateFunction={createCustomClusterIcon}
+        >
+          {pins.map((pin) => (
+            <PinMarker key={pin.id} pin={pin} onClick={handlePinClick} />
+          ))}
 
-        {showCoffeeCarts && coffeeCartsData.map((cart) => (
-          <CoffeeCartMarker key={cart.id} cart={cart} />
-        ))}
+          {showCoffeeCarts && coffeeCartsData.map((cart) => (
+            <CoffeeCartMarker key={cart.id} cart={cart} />
+          ))}
+        </MarkerClusterGroup>
 
         <UserLocationMarker location={userLocation} />
         <FlyToPin key={externalPin?.id + '_' + externalPin?.lat} pin={externalPin} onReady={(pin) => { setSelectedPin(pin); setPendingLatlng(null) }} />
@@ -237,8 +260,8 @@ export default function MapView({ pins, isOwner = true, readOnly = false, extern
           onClick={() => setShowCoffeeCarts(!showCoffeeCarts)}
           title="Toggle Coffee Carts"
           className={`flex items-center justify-center w-11 h-11 rounded-xl shadow-ntz-card border transition-colors ${showCoffeeCarts
-              ? 'bg-[#FF8C42] border-[#FF8C42] text-white'
-              : 'bg-white border-[#FF8C42]/40 text-[#FF8C42] hover:border-[#FF8C42]'
+            ? 'bg-[#FF8C42] border-[#FF8C42] text-white'
+            : 'bg-white border-[#FF8C42]/40 text-[#FF8C42] hover:border-[#FF8C42]'
             }`}
         >
           <Coffee className="w-5 h-5" />

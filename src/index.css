@@ -195,6 +195,71 @@ body {
   border: 2px solid #FF8C42 !important;
 }
 
+/* Custom Cluster Marker */
+.custom-cluster-icon {
+  background: transparent;
+  border: none;
+}
+
+.cluster-marker-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 48px;
+  transition: transform 0.2s ease;
+}
+
+.cluster-marker-container:hover {
+  transform: scale(1.15) translateY(-5px);
+}
+
+.cluster-count-badge {
+  position: absolute;
+  top: -10px;
+  background: #EF233C;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 2px 8px;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(239, 35, 60, 0.4);
+  z-index: 2;
+  font-family: 'DM Sans', sans-serif;
+  animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cluster-icon-base {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #7B8EF5;
+  z-index: 1;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
